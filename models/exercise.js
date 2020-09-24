@@ -7,11 +7,11 @@
 module.exports = function(sequelize, Datatypes) {
     const Exercise = sequelize.define("Exercise", {
         // 
-        exercise_id: {
-            type: Datatypes.INTEGER,
-            key: 'id',
+        id: {
+            type: Datatypes.UUID,
+            defaultValue: sequelize.UUIDV4,
         },
-        exercise_name: {
+        name: {
           type: DataTypes.STRING,
           allowNull: false,
           unique: true, 
