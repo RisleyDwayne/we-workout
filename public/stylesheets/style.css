@@ -9,7 +9,7 @@ form.login {
   background-color: black;
 }
 
-.login_pic {
+#login_pic {
   height: 300px;
 }
 
@@ -52,4 +52,51 @@ input {
  text-align: center;
  margin-top: 0px;
 }
+
+/* HOMEPAGE */
+
+.homePage_banner {
+  text-align: center;
+  background-color: black;
+}
+
+.homePage_buttons1 {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  margin-right: 50px;
+  margin-left: 50px;
+}
+
+.homePage_buttons2 {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  margin-right: 50px;
+  margin-left: 50px;
+  margin-bottom: 50px;
+}
+
+.img1,
+.img2,
+.img3,
+.img4 {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+
+/* @media screen and (max-width:374px){
+  .homePage_buttons1 {
+    width: 50px;
+    height: 50px;
+  }
+
+  .homePage_buttons2 {
+    width: 50px;
+    height: 50px;
+  }
+} */
+
+
 
