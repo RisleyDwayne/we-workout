@@ -14,7 +14,7 @@ form.login {
 }
 
 .signUp_pic {
-  height: 100px;
+  height: 300px;
   padding: 10px;
 }
 
@@ -53,3 +53,7 @@ input {
  margin-top: 0px;
 }
 
+#signUpHeader {
+  font-family: 'Passion One', cursive;
+  color: rgb(0, 0, 0);
+}
