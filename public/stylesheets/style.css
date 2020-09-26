@@ -4,7 +4,8 @@ form.login {
 }
 
 .login_banner,
-.signUp_banner {
+.signUp_banner,
+.banner {
   text-align: center;
   background-color: black;
 }
