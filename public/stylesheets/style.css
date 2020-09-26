@@ -100,3 +100,10 @@ input {
 
 
 
+.exersiseList {
+  justify-content: center;
+
+}
+.selectpicker {
+  width: 'auto'
+}
