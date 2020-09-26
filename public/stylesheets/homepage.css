@@ -74,3 +74,17 @@ form.login {
     height: 50px;
   }
 } */
+
+  .navbar {
+    background-color: black;
+  }
+
+  .nav-link {
+    color: white;
+    text-align: center;
+}
+
+#empty {
+  padding: 25px;
+  margin: 25px;
+}
