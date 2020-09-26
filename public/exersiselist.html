@@ -9,129 +9,116 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link href="public\stylesheets\excercise_workout.css" rel="stylesheet">
-    <link href="public\stylesheets\style.css" rel="stylesheet">
+    <!-- <link href="public\stylesheets\style.css" rel="stylesheet"> -->
+    <link href="stylesheets/excercise_workout.css" rel="stylesheet">
+
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
 <body>
 
-    <div class="homePage_banner">
-        <img src="./assets/images/weworkout.JPG" class="animate__animated animate__fadeInLeft" id="login_pic"></img>
+
+    <div class="jumbotron  header_custom">
+        <div class="row justify-content-center row-margin">
+            <!-- <img src="./assets/images/weworkout-cropped.JPG" class="img-fluid" alt="Responsive image"> -->
+            <img src="./assets/images/weworkout-cropped.JPG" class="headerImg" alt="Responsive image">
+
+        </div>
     </div>
 
-    <div class="modal" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Modal title</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <p>Modal body text goes here.</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                </div>
+
+        <div class="container">
+
+            <div class="form-group">
+                </br>
+                <label for="sel1">
+                    <h3>Exersise type:</h3>
+                </label>
+                <select class="form-control" id="sel1">
+                    <optgroup label="Body weight">
+                        <option>Upper body</option>
+                        <option>Lower Body</option>
+                        <option>Cardio</option>
+                    </optgroup>
+                    <optgroup label="free weights">
+                        <option>Upper body</option>
+                        <option>Lower Body</option>
+                        <option>Cardio</option>
+                    </optgroup>
+                    <optgroup label="machine">
+                        <option>Upper body</option>
+                        <option>Lower Body</option>
+                        <option>Cardio</option>
+                    </optgroup>
+
+                </select>
             </div>
-        </div>
-    </div>
 
+            <button type="button" class="btn btn-secondary btn-lg btn-block" data-toggle="modal"
+                data-target="#exampleModal">Pushups</button>
+            <button type="button" class="btn btn-secondary btn-lg btn-block" data-toggle="modal"
+                data-target="#exampleModal">Pushups</button>
+            <button type="button" class="btn btn-secondary btn-lg btn-block" data-toggle="modal"
+                data-target="#exampleModal">Pushups</button>
+            <button type="button" class="btn btn-secondary btn-lg btn-block" data-toggle="modal"
+                data-target="#exampleModal">Pushups</button>
+            <button type="button" class="btn btn-secondary btn-lg btn-block" data-toggle="modal"
+                data-target="#exampleModal">Pushups</button>
+            <button type="button" class="btn btn-secondary btn-lg btn-block" data-toggle="modal"
+                data-target="#exampleModal">Pushups</button>
+            <button type="button" class="btn btn-secondary btn-lg btn-block" data-toggle="modal"
+                data-target="#exampleModal">Pushups</button>
+            <button type="button" class="btn btn-secondary btn-lg btn-block" data-toggle="modal"
+                data-target="#exampleModal">Pushups</button>
+            <button type="button" class="btn btn-secondary btn-lg btn-block" data-toggle="modal"
+                data-target="#exampleModal">Pushups</button>
+            <button type="button" class="btn btn-secondary btn-lg btn-block" data-toggle="modal"
+                data-target="#exampleModal">Pushups</button>
+            <button type="button" class="btn btn-secondary btn-lg btn-block" data-toggle="modal"
+                data-target="#exampleModal">Pushups</button>
+            <button type="button" class="btn btn-secondary btn-lg btn-block" data-toggle="modal"
+                data-target="#exampleModal">Pushups</button>
+            <button type="button" class="btn btn-secondary btn-lg btn-block" data-toggle="modal"
+                data-target="#exampleModal">Pushups</button>
+            <button type="button" class="btn btn-secondary btn-lg btn-block" data-toggle="modal"
+                data-target="#exampleModal">Pushups</button>
 
-    <div class="container">
-
-        <div class="form-group">
-            </br>
-            <label for="sel1">
-                <h3>Exersise type:</h3>
-            </label>
-            <select class="form-control" id="sel1">
-                <optgroup label="Body weight">
-                    <option>Upper body</option>
-                    <option>Lower Body</option>
-                    <option>Cardio</option>
-                </optgroup>
-                <optgroup label="free weights">
-                    <option>Upper body</option>
-                    <option>Lower Body</option>
-                    <option>Cardio</option>
-                </optgroup>
-                <optgroup label="machine">
-                    <option>Upper body</option>
-                    <option>Lower Body</option>
-                    <option>Cardio</option>
-                </optgroup>
-
-            </select>
-        </div>
-
-        <button type="button" class="btn btn-secondary btn-lg btn-block" data-toggle="modal"
-            data-target="#exampleModal">Pushups</button>
-        <button type="button" class="btn btn-secondary btn-lg btn-block" data-toggle="modal"
-            data-target="#exampleModal">Pushups</button>
-        <button type="button" class="btn btn-secondary btn-lg btn-block" data-toggle="modal"
-            data-target="#exampleModal">Pushups</button>
-        <button type="button" class="btn btn-secondary btn-lg btn-block" data-toggle="modal"
-            data-target="#exampleModal">Pushups</button>
-        <button type="button" class="btn btn-secondary btn-lg btn-block" data-toggle="modal"
-            data-target="#exampleModal">Pushups</button>
-        <button type="button" class="btn btn-secondary btn-lg btn-block" data-toggle="modal"
-            data-target="#exampleModal">Pushups</button>
-        <button type="button" class="btn btn-secondary btn-lg btn-block" data-toggle="modal"
-            data-target="#exampleModal">Pushups</button>
-        <button type="button" class="btn btn-secondary btn-lg btn-block" data-toggle="modal"
-            data-target="#exampleModal">Pushups</button>
-        <button type="button" class="btn btn-secondary btn-lg btn-block" data-toggle="modal"
-            data-target="#exampleModal">Pushups</button>
-        <button type="button" class="btn btn-secondary btn-lg btn-block" data-toggle="modal"
-            data-target="#exampleModal">Pushups</button>
-        <button type="button" class="btn btn-secondary btn-lg btn-block" data-toggle="modal"
-            data-target="#exampleModal">Pushups</button>
-        <button type="button" class="btn btn-secondary btn-lg btn-block" data-toggle="modal"
-            data-target="#exampleModal">Pushups</button>
-        <button type="button" class="btn btn-secondary btn-lg btn-block" data-toggle="modal"
-            data-target="#exampleModal">Pushups</button>
-        <button type="button" class="btn btn-secondary btn-lg btn-block" data-toggle="modal"
-            data-target="#exampleModal">Pushups</button>
-
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog modal-sm" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Pushups</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        What is Lorem Ipsum Lorem Ipsum is simply dummy text of the printing and typesetting industry
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s when an unknown
-                        printer took a galley of type and scrambled it to make a type specimen book it has?
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Add to your workout</button>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-sm" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Pushups</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            What is Lorem Ipsum Lorem Ipsum is simply dummy text of the printing and typesetting
+                            industry
+                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s when an unknown
+                            printer took a galley of type and scrambled it to make a type specimen book it has?
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Add to your workout</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-        crossorigin="anonymous"></script>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+            integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+            crossorigin="anonymous"></script>
 </body>
 
 </html>
