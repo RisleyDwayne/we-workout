@@ -4,7 +4,8 @@ form.login {
 }
 
 .login_banner,
-.signUp_banner {
+.signUp_banner,
+.banner {
   text-align: center;
   background-color: black;
 }
@@ -14,7 +15,7 @@ form.login {
 }
 
 .signUp_pic {
-  height: 100px;
+  height: 300px;
   padding: 10px;
 }
 
@@ -53,6 +54,10 @@ input {
  margin-top: 0px;
 }
 
+#signUpHeader {
+  font-family: 'Passion One', cursive;
+  color: rgb(0, 0, 0);
+}
 /* HOMEPAGE */
 
 .homePage_banner {
