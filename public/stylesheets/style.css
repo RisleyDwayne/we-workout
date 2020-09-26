@@ -3,13 +3,20 @@ form.login {
   margin-top: 50px;
 }
 
-.login_banner {
+.login_banner,
+.signUp_banner,
+.banner {
   text-align: center;
   background-color: black;
 }
 
-.login_pic {
+#login_pic {
   height: 300px;
+}
+
+.signUp_pic {
+  height: 300px;
+  padding: 10px;
 }
 
 .form-group {
@@ -29,7 +36,8 @@ input {
   margin: auto;
 }
 
-.login_btn {
+.login_btn,
+ .signUp_btn {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   background-color: blue;
   color: white;
@@ -46,3 +54,61 @@ input {
  margin-top: 0px;
 }
 
+#signUpHeader {
+  font-family: 'Passion One', cursive;
+  color: rgb(0, 0, 0);
+}
+/* HOMEPAGE */
+
+.homePage_banner {
+  text-align: center;
+  background-color: black;
+}
+
+.homePage_buttons1 {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  margin-right: 50px;
+  margin-left: 50px;
+}
+
+.homePage_buttons2 {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  margin-right: 50px;
+  margin-left: 50px;
+  margin-bottom: 50px;
+}
+
+.img1,
+.img2,
+.img3,
+.img4 {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+
+/* @media screen and (max-width:374px){
+  .homePage_buttons1 {
+    width: 50px;
+    height: 50px;
+  }
+
+  .homePage_buttons2 {
+    width: 50px;
+    height: 50px;
+  }
+} */
+
+
+
+.exersiseList {
+  justify-content: center;
+
+}
+.selectpicker {
+  width: 'auto'
+}
