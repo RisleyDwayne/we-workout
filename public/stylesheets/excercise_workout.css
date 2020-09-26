@@ -1,6 +1,13 @@
-.jumbotron_custom {
+.header_custom {
   background-color:black
   }
-.imageHeader {
-  align-content: center;
+
+  .jumbotron {
+height: 170px;
+padding: 0px;   
+margin: 0px; }
+.headerImg {
+  height: 150px;
+  /* margin-top: 0px; */
 }
+
