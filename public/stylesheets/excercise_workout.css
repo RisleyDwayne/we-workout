@@ -1,4 +1,6 @@
-.homePage_banner {
-    text-align: center;
-    background-color: black;
+.jumbotron_custom {
+  background-color:black
   }
+.imageHeader {
+  align-content: center;
+}
