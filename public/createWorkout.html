@@ -24,7 +24,7 @@
     </div>
 
     <!-- Create Workout Form -->
-    <div class="container">
+    <div class="container form-container">
         <div class="row">
             <div class="col-sm">
                 <form class="createWorkout">
@@ -32,23 +32,56 @@
                     <div class="form-group">
                         <input type="text" class="form-control" id="workout-name-input" placeholder="Workout Name">
                     </div>
+                    <!-- exercises form group -->
                     <div class="form-group">
+                        <h5 class="select-list-title">Select Exercises</h5>
+                        <p class="body-list-title">Upper Body:</p>
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
                                 <div class="input-group-text">
                                     <input type="checkbox" id="exercise-input" aria-label="select-exercise">
                                 </div>
                             </div>
-                            <div type="text" class="form-control" aria-label="exercise"> HANDLEBARS {{ exercise }}
+                            <div type="text" class="form-control" aria-label="exercise"> {{ upper body exercise }}
                             </div>
                         </div>
-                        <!-- alert message -->
-                        <div style="display: none" id="alert" class="alert alert-danger" role="alert">
-                            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-                            <span class="sr-only">Error:</span> <span class="msg"></span>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                    <input type="checkbox" id="exercise-input" aria-label="select-exercise">
+                                </div>
+                            </div>
+                            <div type="text" class="form-control" aria-label="exercise"> {{ upper body exercise }}
+                            </div>
                         </div>
-                        <!-- Submit sign up form button -->
-                        <button type="submit" class="createWorkout_btn btn-large" value="submit">Create</button>
+                        <p class="body-list-title">Lower Body:</p>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                    <input type="checkbox" id="exercise-input" aria-label="select-exercise">
+                                </div>
+                            </div>
+                            <div type="text" class="form-control" aria-label="exercise"> {{ lower body exercise }}
+                            </div>
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                    <input type="checkbox" id="exercise-input" aria-label="select-exercise">
+                                </div>
+                            </div>
+                            <div type="text" class="form-control" aria-label="exercise"> {{ lower body exercise }}
+                            </div>
+                        </div>
+                        <!-- end exercises form-group -->
+                    </div>
+                    <!-- alert message -->
+                    <div style="display: none" id="alert" class="alert alert-danger" role="alert">
+                        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                        <span class="sr-only">Error:</span> <span class="msg"></span>
+                    </div>
+                    <!-- Submit sign up form button -->
+                    <button type="submit" class="createWorkout_btn btn-large" value="submit">Create</button>
                 </form>
                 <!-- end col -->
             </div>
@@ -59,7 +92,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="./js/createWorkout.js"></script>
-    
+
 </body>
 
 </html>

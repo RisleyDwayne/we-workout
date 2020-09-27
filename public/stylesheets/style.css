@@ -40,6 +40,17 @@ form.createWorkout {
   margin-bottom: 25px;
 }
 
+.select-list-title {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  margin-top: 25px;
+}
+
+.body-list-title {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin-top: 25px;
+}
+
 .form-group {
   text-align: center;
 }
