@@ -1,49 +1,55 @@
-form.signup,
-form.login {
-  margin-top: 50px;
+/* Stylesheet for login, sign up and create workout pages/forms */
+
+/* prevents side scroll bar on small devices */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
-.header_custom {
-  background-color:black
-  }
-
+/* header on all pages */
 .jumbotron {
   height: 170px;
   padding: 0px;   
-  margin: 0px; }
+  margin: 0px;
+  background-color:black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
 
 .headerImg {
   height: 150px;
 }
 
-/* .login_banner,
-.signUp_banner,
-.banner {
-  text-align: center;
-  background-color: black;
+/* container for forms */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#login_pic {
-  height: 300px;
-} */
+form.signup,
+form.login,
+form.createWorkout {
+  margin-top: 50px;
+}
+
+.form-header {
+  font-family: 'Passion One', cursive;
+  color: rgb(0, 0, 0);
+  margin-bottom: 25px;
+}
 
 .form-group {
   text-align: center;
 }
 
-/* button {
-  margin: auto;
-  display: block;
-} */
-
 input {
+  display: flex;
   text-align: center;
 }
 
-.container {
-  margin: auto;
-}
-
+/* submit buttons */
 .login_btn,
  .signUp_btn,
  .createWorkout_btn {
@@ -58,17 +64,19 @@ input {
   width: 300px;
 }
 
+/* text and link to go to sign up/login below submit button */
 .login_p {
  text-align: center;
  margin-top: 0px;
 }
 
-#signUpHeader {
-  font-family: 'Passion One', cursive;
-  color: rgb(0, 0, 0);
-}
-/* HOMEPAGE */
 
+
+
+/* style below was moved to other css files but here just incase */
+
+/* HOMEPAGE */
+/* 
 .homePage_banner {
   text-align: center;
   background-color: black;
@@ -97,9 +105,7 @@ input {
 .img4 {
   margin-left: 20px;
   margin-right: 20px;
-}
-
-
+} */
 
 /* @media screen and (max-width:374px){
   .homePage_buttons1 {
@@ -112,13 +118,11 @@ input {
     height: 50px;
   }
 } */
-
-
-
+/* 
 .exersiseList {
   justify-content: center;
 
 }
 .selectpicker {
   width: 'auto'
-}
+} */
