@@ -22,7 +22,7 @@ html, body {
 }
 
 /* container for forms */
-.container {
+.form-container {
   display: flex;
   justify-content: center;
   align-items: center;
