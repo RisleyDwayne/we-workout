@@ -7,10 +7,10 @@
     <link rel="icon" href="./assets/images/wwappSymbol.jpg">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css2?family=Passion+One:wght@400;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Passion+One:wght@400;900&display=swap" rel="stylesheet">
     <link href="stylesheets/style.css" rel="stylesheet">
 </head>
 
@@ -18,36 +18,37 @@
     <!-- page header -->
     <div class="jumbotron  header_custom">
         <div class="row justify-content-center row-margin">
-            <img src="./assets/images/weworkout-cropped.JPG" class="headerImg animate__animated animate__fadeInLeft" alt="Responsive image">
+            <img src="./assets/images/weworkout-cropped.JPG" class="headerImg animate__animated animate__fadeInLeft"
+                alt="Responsive image">
         </div>
     </div>
 
     <!-- Create Workout Form -->
     <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-6 col-md-offset-3">
-                <h1 class="text-center" id="signUpHeader">Create a Workout</h1>
-                <form class="signup">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <input type="text" class="form-control" id="workout-name-input" placeholder="Workout Name">
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <div class="input-group-text">
-                                        <input type="checkbox" aria-label="select-exercise">
-                                    </div>
-                                </div>
-                                <div type="text" class="form-control" aria-label="exercise"> HANDLEBARS {{ exercise }}
+        <div class="row">
+            <div class="col-sm">
+                <form class="createWorkout">
+                    <h1 class="text-center form-header">Create a Workout</h1>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="workout-name-input" placeholder="Workout Name">
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                    <input type="checkbox" aria-label="select-exercise">
                                 </div>
                             </div>
-                            <!-- alert message -->
-                            <div style="display: none" id="alert" class="alert alert-danger" role="alert">
-                                <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-                                <span class="sr-only">Error:</span> <span class="msg"></span>
+                            <div type="text" class="form-control" aria-label="exercise"> HANDLEBARS {{ exercise }}
                             </div>
-                            <!-- Submit sign up form button -->
-                            <button type="submit" class="createWorkout_btn btn-large" value="submit">Create
-                                Workout</button>
+                        </div>
+                        <!-- alert message -->
+                        <div style="display: none" id="alert" class="alert alert-danger" role="alert">
+                            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                            <span class="sr-only">Error:</span> <span class="msg"></span>
+                        </div>
+                        <!-- Submit sign up form button -->
+                        <button type="submit" class="createWorkout_btn btn-large" value="submit">Create</button>
                 </form>
                 <!-- end col -->
             </div>
