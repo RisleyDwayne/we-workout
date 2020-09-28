@@ -17,17 +17,7 @@ module.exports = function (sequelize, DataTypes) {
       allowNull: false,
       unique: true,
     },
-    // 
-    weights_used: {
-      type: DataTypes.BOOLEAN,
-    },
-    body_zone: {
-      type: DataTypes.STRING,
-
-    },
-    body_impact: {
-      type: DataTypes.STRING,
-    }
+    
 
   });
 
