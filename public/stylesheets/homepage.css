@@ -9,7 +9,7 @@ form.login {
 }
 
 #login_pic {
-  height: 300px;
+  height: 100px;
 }
 
 
@@ -26,7 +26,7 @@ form.login {
     margin-bottom: 50px;
   }
   
-  .img1 {
+  /* .img1 {
       margin-right: 20px;
   }
   
@@ -75,6 +75,10 @@ form.login {
   }
 } */
 
+  .img3 {
+    margin-right: 20px;
+} */
+
   .navbar {
     background-color: black;
   }
@@ -87,4 +91,18 @@ form.login {
 #empty {
   padding: 25px;
   margin: 25px;
+}
+
+ @media screen and (min-width:500px){
+  .linkImage {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media screen and (max-width:500px){
+  .appImage {
+    width: 100%;
+    margin-left: 0px;
+  }
 }
