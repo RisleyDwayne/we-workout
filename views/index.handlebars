@@ -1,0 +1,86 @@
+<div class="jumbotron  header_custom">
+  <div class="row justify-content-center row-margin">
+    <!-- <img src="./assets/images/weworkout-cropped.JPG" class="img-fluid" alt="Responsive image"> -->
+    <img src="./assets/images/weworkout-cropped.JPG" class="headerImg" alt="Responsive image">
+
+  </div>
+</div>
+
+
+<div class="container">
+
+  <div class="form-group">
+    </br>
+    <label for="sel1">
+      <h3>Exersise type:</h3>
+    </label>
+    <select class="form-control" id="sel1">
+      <optgroup label="Body weight">
+        <option>Upper body</option>
+        <option>Lower Body</option>
+        <option>Cardio</option>
+      </optgroup>
+      <optgroup label="free weights">
+        <option>Upper body</option>
+        <option>Lower Body</option>
+        <option>Cardio</option>
+      </optgroup>
+    </select>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="card text-white bg-dark">
+        <div class="card-body">
+          <h5 class="card-title">Special title treatment</h5>
+          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+  integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+  integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+  integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+{{!-------------------------------------------below is from my burgers HW  --}}
+
+
+
+<h1>Burger Menu!</h1>
+
+<h2>Burgers that are not eaten!</h2>
+
+<ul>
+  {{#each burgers}}
+  {{#unless eaten}}
+  {{> burgers/burger-block ate= 1}}
+  {{/unless}}
+  {{/each}}
+</ul>
+
+<h2>Burgerss that are eaten!</h2>
+
+<ul>
+  {{#each burgers}}
+  {{#if eaten}}
+  {{> burgers/burger-block ate= 0}}
+  {{/if}}
+  {{/each}}
+</ul>
+
+<h2>Add a Burger</h2>
+<form class="create-form">
+
+  <div class="form-group">
+    <label for="ca">Burger Name:</label>
+    <input type="text" id="ca" name="name">
+  </div>
+
+
+  <button type="submit">Add Burger to Menu</button>
+</form>
