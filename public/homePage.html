@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>We Workout Login</title>
+    <title>We Workout Homepage</title>
     <!-- browser tab icon -->
     <link rel="icon" href="./assets/images/wwappSymbol.jpg">
     <meta charset="UTF-8">
@@ -15,31 +15,36 @@
 
 <body>
 
-    <div class="homePage_banner">
+    <div class="homePage_banner fixed-top">
         <img src="./assets/images/weworkout.JPG" class="animate__animated animate__fadeInLeft" id="login_pic"></img>
     </div>
 
-    <div class="homePage_buttons1">
-        <div class="flex-container">
-            <!-- <div class="row"> -->
-            <div>
-                <a class="col-6" href='workout.html'><img src='./assets/images/gym-5000169_1920.jpg' alt="We workouts"
-                        width="300px" height="300px"></a>
-                <a class="col-6" href='add_link'><img src='./assets/images/Workout-Planner.jpeg' alt="My workouts"
-                        width="300px" height="300px"></a>
-            </div>
-            <!-- </div> -->
-        </div>
-    </div>
+    <!-- blank row below card -->
+    <div class="row mb-10" id="empty"></div>
 
-    <div class="homePage_buttons2">
-        <div class="flex-container">
-            <div class="row">
+    <div style="overflow-y: scroll;">
+        <div class="homePage_buttons1">
+            <div class="flex-container">
+                <!-- <div class="row"> -->
                 <div>
-                    <a class="col-6" href='add_link'><img src='./assets/images/fitness-Silhouettes.jpg'
-                            alt="All excercises" width="300px" height="300px"></a>
-                    <a class="col-6" href='add_link'><img src='./assets/images/something_new.jpg' alt="alternate_text"
-                            width="300px" height="300px"></a>
+                    <a class="col-6" href='workout.html'><img class="appImage" src='./assets/images/appWeWorkouts.JPG' alt="We workouts"
+                            width="350px" height="300px"></a>
+                    <a class="col-6" href='add_link'><img class="appImage" src='./assets/images/appMyWorkouts.JPG' alt="My workouts"
+                            width="350px" height="300px"></a>
+                </div>
+                <!-- </div> -->
+            </div>
+        </div>
+    
+        <div class="homePage_buttons2">
+            <div class="flex-container">
+                <div class="row">
+                    <div>
+                        <a class="col-6" href='add_link'><img class="appImage" src='./assets/images/appAllExcercises.JPG'
+                                alt="All excercises" width="350px" height="300px"></a>
+                        <a class="col-6" href='add_link'><img class="appImage" src='./assets/images/appCreateWorkout.JPG' alt="alternate_text"
+                                width="350px" height="300px"></a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -52,16 +57,20 @@
     <nav class="navbar fixed-bottom justify-content-center">
         <ul class="nav justify-content-center">
             <li class="nav-item">
-                <a class="nav-link" href="workout.html">We <br> Workouts</a>
+                <a class="nav-link" href="workout.html"><img class="linkImage" src='./assets/images/WeWorkIcon.JPG' alt="alternate_text"
+                    width="50px" height="50px"></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="workout.html">My <br> Workouts</a>
+                <a class="nav-link" href="workout.html"><img class="linkImage" src='./assets/images/MyWorkoutIcon.JPG' alt="alternate_text"
+                    width="50px" height="50px"></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="Excercises">All <br> Excercises</a>
+                <a class="nav-link" href="Excercises"><img class="linkImage" src='./assets/images/icon.JPG' alt="alternate_text"
+                width="50px" height="50px"></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="createWorkout.html" target="_blank">Create <br> Workout</a>
+                <a class="nav-link" href="createWorkout.html" target="_blank"><img class="linkImage" src='./assets/images/CreateIcon.JPG' alt="alternate_text"
+                    width="50px" height="50px"></a>
             </li>
         </ul>
         <!-- end sticky footer -->
