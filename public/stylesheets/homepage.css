@@ -1,0 +1,32 @@
+form.signup,
+form.login {
+  margin-top: 50px;
+}
+
+.homePage_banner {
+  text-align: center;
+  background-color: black;
+}
+
+#login_pic {
+  height: 300px;
+}
+
+
+.homePage_buttons1 {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+  }
+  
+  .homePage_buttons2 {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  
+  .img1 {
+      margin-right: 20px;
+  }
+  
