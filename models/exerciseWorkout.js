@@ -1,3 +1,6 @@
+var Workout = require("./workout");
+var Exercise = require("./exercise");
+
 module.exports = function(sequelize, DataTypes) {
     const ExerciseWorkout = sequelize.define("ExerciseWorkout", {
         WorkoutId: {

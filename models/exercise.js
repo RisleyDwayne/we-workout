@@ -4,12 +4,13 @@
 
 // Exercie Module
 
-module.exports = function(sequelize, Datatypes) {
+module.exports = function(sequelize, DataTypes) {
     const Exercise = sequelize.define("Exercise", {
         // 
         id: {
-            type: Datatypes.UUID,
+            type: DataTypes.UUID,
             defaultValue: sequelize.UUIDV4,
+            primaryKey: true,
         },
         name: {
           type: DataTypes.STRING,
@@ -21,11 +22,11 @@ module.exports = function(sequelize, Datatypes) {
           type: DataTypes.BOOLEAN,
         },
         body_zone: {
-            type: Datatypes.STRING,
+            type: DataTypes.STRING,
 
         },
         body_impact: {
-            type: Datatypes.STRING,
+            type: DataTypes.STRING,
         }
 
       });

@@ -1,10 +1,9 @@
-const sequelize = require(sequelize);
-const Sequelize = require(Sequelize);
-module.exports = function(sequelize, Datatypes) {
+module.exports = function(sequelize, DataTypes) {
 const Workout = sequelize.define("Workout", {
     id: {
-        type: Datatypes.UUID,
+        type: DataTypes.UUID,
         defaultValue: sequelize.UUIDV4,
+        primaryKey: true,
     },
     name: {
       type: DataTypes.STRING,
