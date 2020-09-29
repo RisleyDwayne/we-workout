@@ -1,0 +1,41 @@
+<div class="jumbotron  header_custom">
+  <div class="row justify-content-center row-margin">
+    <img src="./assets/images/weworkout-cropped.JPG" class="headerImg" alt="Responsive image">
+  </div>
+</div>
+
+
+<div class="container">
+
+  <div class="form-group">
+    </br>
+    <label for="sel1">
+      <h3>Exersise type:</h3>
+    </label>
+    <select class="form-control" id="sel1">
+      <optgroup label="Body weight">
+        <option>Upper body</option>
+        <option>Lower Body</option>
+        <option>Cardio</option>
+      </optgroup>
+      <optgroup label="free weights">
+        <option>Upper body</option>
+        <option>Lower Body</option>
+        <option>Cardio</option>
+      </optgroup>
+    </select>
+  </div>
+
+  <div class="row">
+    {{#each exersises}}
+    <div class="col-sm-6">
+      <div class="card text-white bg-dark">
+        <div class="card-body">
+          <h5 class="card-title">{{this.title}}</h5>
+          <p class="card-text">{{this.text}}</p>
+        </div>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+</div>
