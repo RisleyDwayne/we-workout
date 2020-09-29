@@ -11,3 +11,56 @@ margin: 0px; }
   /* margin-top: 0px; */
 }
 
+.card{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.premadeImages {
+  color: #f8f9fa;
+  background-size: cover;
+  height: 300px;
+  color: white;
+  font-size: 40px;
+  margin: 20px;
+}
+
+#premadeImg1 {
+  background-image: url("../assets/images/exercise.jpg");
+  color: #f8f9fa;
+  background-size: cover;
+  height: 300px;
+  color: white;
+  font-size: 40px;
+  margin: 20px;
+}
+
+#premadeImg2 {
+  background-image: url("../assets/images/weights.jpg");
+  color: #f8f9fa;
+  background-size: cover;
+  height: 300px;
+  color: white;
+  font-size: 40px;
+  margin: 20px;
+}
+
+#premadeImg3 {
+  background-image: url("../assets/images/run.jpg");
+  color: #f8f9fa;
+  background-size: cover;
+  height: 300px;
+  color: white;
+  font-size: 40px;
+  margin: 20px;
+}
+
+#premadeImg4 {
+  background-image: url("../assets/images/row.jpg");
+  color: #f8f9fa;
+  background-size: cover;
+  height: 300px;
+  color: white;
+  font-size: 40px;
+  margin: 20px;
+}
+

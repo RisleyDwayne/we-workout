@@ -1,7 +1,8 @@
+const router = require("express").Router();
 var db = require("../models");
 
-module.exports = function (app) {
-    app.get("/api/exercise", function (req, res) {
+
+    router.get("/all", function (req, res) {
         db.Exercise.findAll({
             include: [db.Post]
         }).then(function (dbExercise) {
@@ -9,7 +10,7 @@ module.exports = function (app) {
         });
     });
 
-    app.get("/api/exercise/:id", function (req, res) {
+    router.get("/:id", function (req, res) {
         
         db.Exercise.findOne({
             where: {
@@ -21,13 +22,13 @@ module.exports = function (app) {
         });
     });
 
-    app.post("/api/exercise", function (req, res) {
+    router.post("/", function (req, res) {
         db.Exercise.create(req.body).then(function (dbExercise) {
             res.json(dbExercise);
         });
     });
 
-    app.delete("/api/exercise/:id", function (req, res) {
+    router.delete("/:id", function (req, res) {
         db.Exercise.destroy({
             where: {
                 id: req.params.id
@@ -37,4 +38,4 @@ module.exports = function (app) {
         });
     });
 
-};
+module.exports = router
