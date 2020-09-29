@@ -11,7 +11,8 @@ module.exports = function(sequelize, DataTypes) {
             type: DataTypes.INTEGER,
             references: {
                 model: Exercise,
-                key: 'id'
+                key: 'id',
+                primaryKey: true,
             }
         }
     });

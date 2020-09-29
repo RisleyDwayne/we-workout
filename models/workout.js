@@ -1,16 +1,22 @@
-const sequelize = require(sequelize);
-const Sequelize = require(Sequelize);
-module.exports = function(sequelize, Datatypes) {
-const Workout = sequelize.define("Workout", {
+module.exports = function (sequelize, DataTypes) {
+
+  const Workout = sequelize.define("Workout", {
     id: {
-        type: Datatypes.UUID,
-        defaultValue: sequelize.UUIDV4,
+      primaryKey: true,
+      type: DataTypes.UUID,
+      defaultValue: sequelize.UUIDV4,
     },
     name: {
       type: DataTypes.STRING,
       allowNull: false,
-      unique: true, 
+      unique: true,
     },
-})
-return Workout;
-}; 
+  });
+  Workout.associate = (models) => {
+    Workout.belongsToMany(models.Exercise, {
+      through: "ExerciseWorkout"
+    })
+  };
+  return Workout;
+
+};
