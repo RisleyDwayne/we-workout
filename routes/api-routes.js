@@ -2,8 +2,9 @@
 const router = require("express").Router();
 const db = require("../models");
 const passport = require("../config/passport");
+const exerciseRoutes = require("./exercise-routes");
 
-router.use("/excercise", excerciseRoutes);
+router.use("/exercise", exerciseRoutes);
 
   // Using the passport.authenticate middleware with our local strategy.
   // If the user has valid login credentials, send them to the members page.

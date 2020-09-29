@@ -20,6 +20,12 @@ module.exports = function (sequelize, DataTypes) {
     
 
   });
+Exercise.associate = (models)=> {
+  Exercise.belongsToMany(models.Workout, {
+    through: "ExerciseWorkout"
+});
+}
+
 
   return Exercise;
 };
