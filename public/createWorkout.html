@@ -35,42 +35,79 @@
                     <!-- exercises form group -->
                     <div class="form-group">
                         <h5 class="select-list-title">Select Exercises</h5>
-                        <p class="body-list-title">Upper Body:</p>
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <div class="input-group-text">
-                                    <input type="checkbox" id="exercise-input" aria-label="select-exercise">
-                                </div>
-                            </div>
-                            <div type="text" class="form-control" aria-label="exercise"> {{ upper body exercise }}
+                        <div class="container img-container">
+                            <div class="row justify-content-center row-margin">
+                                <img id="type-of-exercise" src="./assets/images/upperBody.jpg" alt="Responsive image">
+                                <h1 id="img-title">Upper Body</h1>
                             </div>
                         </div>
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <div class="input-group-text">
-                                    <input type="checkbox" id="exercise-input" aria-label="select-exercise">
+                        <div style="display: none" id="hidden-UpperBody-exercises">
+                            <p class="body-list-title">Upper Body:</p>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">
+                                        <input type="checkbox" id="exercise-input" aria-label="select-exercise">
+                                    </div>
                                 </div>
-                            </div>
-                            <div type="text" class="form-control" aria-label="exercise"> {{ upper body exercise }}
+                                <div type="text" class="form-control" aria-label="exercise"> {{ upper body exercise }}
+                                </div>
                             </div>
                         </div>
-                        <p class="body-list-title">Lower Body:</p>
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <div class="input-group-text">
-                                    <input type="checkbox" id="exercise-input" aria-label="select-exercise">
-                                </div>
-                            </div>
-                            <div type="text" class="form-control" aria-label="exercise"> {{ lower body exercise }}
+                        <div class="container img-container">
+                            <div class="row justify-content-center row-margin">
+                                <img id="type-of-exercise" src="./assets/images/lowerBody.jpg"
+                                    alt="Lower Body Exercises">
+                                <h1 id="img-title">Lower Body</h1>
                             </div>
                         </div>
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <div class="input-group-text">
-                                    <input type="checkbox" id="exercise-input" aria-label="select-exercise">
+                        <div style="display: none" id="hidden-lowerBody-exercises">
+                            <p class="body-list-title">Lower Body:</p>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">
+                                        <input type="checkbox" id="exercise-input" aria-label="select-exercise">
+                                    </div>
+                                </div>
+                                <div type="text" class="form-control" aria-label="exercise"> {{ lower body exercise }}
                                 </div>
                             </div>
-                            <div type="text" class="form-control" aria-label="exercise"> {{ lower body exercise }}
+                        </div>
+                        <div class="container img-container">
+                            <div class="row justify-content-center row-margin">
+                                <img id="type-of-exercise" src="./assets/images/cardio.jpg" alt="Cardio Exercises">
+                                <h1 id="img-title">Cadio</h1>
+                            </div>
+                        </div>
+                        <div style="display: none" id="hidden-cardio-exercises">
+                            <p class="body-list-title">Cardio:</p>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">
+                                        <input type="checkbox" id="exercise-input" aria-label="select-exercise">
+                                    </div>
+                                </div>
+                                <div type="text" class="form-control" aria-label="exercise"> {{ cardio exercise }}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container img-container">
+                            <div class="row justify-content-center row-margin">
+                                <img id="type-of-exercise" src="./assets/images/withEquipment.jpg"
+                                    alt="With Equipment Exercises">
+                                <h1 id="img-title">With Equipment</h1>
+                            </div>
+                        </div>
+                        <div style="display: none" id="hidden-withEquipment-exercises">
+                            <p class="body-list-title">With Equipment:</p>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">
+                                        <input type="checkbox" id="exercise-input" aria-label="select-exercise">
+                                    </div>
+                                </div>
+                                <div type="text" class="form-control" aria-label="exercise">
+                                    {{ withEquipment exercise }}
+                                </div>
                             </div>
                         </div>
                         <!-- end exercises form-group -->
@@ -89,6 +126,8 @@
         </div>
         <!-- end container -->
     </div>
+    <!-- blank space needed? -->
+    <!-- nav bar/ footer -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="./js/createWorkout.js"></script>
