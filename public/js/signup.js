@@ -11,8 +11,8 @@ $(document).ready(() => {
   signUpForm.on("submit", event => {
     event.preventDefault();
     const userData = {
-      fname: fnameInput.val.trim(),
-      lname: lnameInput.val.trim(),
+      fname: fnameInput.val().trim(),
+      lname: lnameInput.val().trim(),
       email: emailInput.val().trim(),
       password: passwordInput.val().trim(),
       dob: dobInput.val().trim()
