@@ -1,7 +1,6 @@
 $(document).ready(() => {
   // Create workout form and input
   const createWorkoutForm = $("form.createWorkout");
-  const workoutNameInput = $("input#workout-name-input");
   const selectedWorkout = $("input#exercise-input");
 
   //Upper body img hide and show exercises
@@ -64,30 +63,32 @@ $(document).ready(() => {
   createWorkoutForm.on("submit", event => {
     event.preventDefault();
     const newWorkout = {
-      woroutName: workoutNameInput.val.trim(),
-      exercises: selectedWorkout.val
+      woroutName: $("#workout-name-input")
+        .val()
+        .trim(),
+      exercises: selectedWorkout.is(":checked")
     };
     //if worout name exists
-    if (!newWorkout.workoutName || !newWorkout.password) {
+    if (!newWorkout.workoutName || !newWorkout.exercises) {
       return;
     }
     //return an alert that says already exists choose a new name
     // If user entered a workout name and selected a exercise, run the newWorkout function
-    newWorkout(newWorkout.workoutName, newWorkout.exercises);
-    workoutNameInput.val("");
+    createWorkout(newWorkout.workoutName, newWorkout.exercises);
+    workoutName.val("");
     exercises.val("");
   });
 
   // Does a post to the signup route. If successful, we are redirected to the members page
   // Otherwise we log any errors
-  function newWorkout(workoutName, exercises) {
+  function createWorkout(workoutName, exercises) {
     $.post("/api/myWorkouts", {
       workoutName: workoutName,
       exercises: exercises
     })
       .then(() => {
         window.location.replace("/myWorkouts");
-        // If there's an error, handle it by throwing up a bootstrap alert
+        // error alert
       })
       .catch(handleDuplicateErr);
   }
