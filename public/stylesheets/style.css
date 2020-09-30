@@ -37,7 +37,33 @@ form.createWorkout {
 .form-header {
   font-family: 'Passion One', cursive;
   color: rgb(0, 0, 0);
-  margin-bottom: 25px;
+  margin-bottom: 40px;
+}
+
+/* img container */
+.img-container {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+
+/* img */
+#type-of-exercise {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 25px;
+  height: 200px;
+}
+
+/* Centered text over img */
+#img-title {
+  font-family: 'Passion One', cursive;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(0, 0, 0, 0.4);
 }
 
 .select-list-title {
