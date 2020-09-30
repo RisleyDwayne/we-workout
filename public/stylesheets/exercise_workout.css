@@ -64,3 +64,10 @@ margin: 0px; }
   margin: 20px;
 }
 
+.navbar {
+  background-color: black;
+}
+.nav-link {
+  color: white;
+  text-align: center;
+}
