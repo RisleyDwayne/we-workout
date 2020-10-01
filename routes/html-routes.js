@@ -37,7 +37,8 @@ module.exports = function(app) {
       exercises: [
         {
           title: "exercise type",
-          text: "exercise explination"
+          text: "exercise explination",
+          style: "exercise_workout.css"
         }
       ]
     };
