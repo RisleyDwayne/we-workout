@@ -4,9 +4,9 @@ const path = require("path");
 // Requiring our custom middleware for checking if a user is logged in
 const isAuthenticated = require("../config/middleware/isAuthenticated");
 
-module.exports = function (app) {
+module.exports = function(app) {
   app.get("/", (req, res) => {
-    // If the user already has an account send them to the homePage page
+    // If the user already has an account send them to the home page
     if (req.user) {
       res.redirect("/homePage");
     }
@@ -14,7 +14,7 @@ module.exports = function (app) {
   });
 
   app.get("/login", (req, res) => {
-    // If the user already has an account send them to the homePage page
+    // If the user already has an account send them to the home page
     if (req.user) {
       res.redirect("/homePage");
     }
@@ -40,8 +40,7 @@ module.exports = function (app) {
           text: "exercise explination"
         }
       ]
-    }
+    };
     res.render("exerciseList", hbspayload)
-  })
+  });
 };
-
