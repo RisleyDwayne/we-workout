@@ -118,10 +118,40 @@ input {
   margin-bottom: 0px;
   height: 50px;
   width: 300px;
+  margin-bottom: 50px;
 }
 
 /* text and link to go to sign up/login below submit button */
 .login_p {
  text-align: center;
  margin-top: 0px;
+}
+
+/* footer */
+.navbar {
+  background-color: white;
+}
+
+.nav-link {
+  color: white;
+  text-align: center;
+}
+
+#empty {
+padding: 25px;
+margin: 25px;
+}
+
+@media screen and (min-width:500px){
+.linkImage {
+  width: 80px;
+  height: 80px;
+}
+}
+
+@media screen and (max-width:500px){
+.appImage {
+  width: 100%;
+  margin-left: 0px;
+}
 }

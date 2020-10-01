@@ -30,7 +30,7 @@ $(document).ready(() => {
     dobInput.val("");
   });
 
-  // Does a post to the signup route. If successful, we are redirected to the members page
+  // Does a post to the signup route. If successful, we are redirected to the homePage page
   // Otherwise we log any errors
   function signUpUser(fname, lname, email, password, dob) {
     $.post("/api/signup", {
@@ -41,7 +41,7 @@ $(document).ready(() => {
       dob: dob,
     })
       .then(() => {
-        window.location.replace("/home");
+        window.location.replace("/homePage");
         // If there's an error, handle it by throwing up a bootstrap alert
       })
       .catch(handleLoginErr);
