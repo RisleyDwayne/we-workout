@@ -41,14 +41,14 @@ $(document).ready(() => {
       dob: dob,
     })
       .then(() => {
-        window.location.replace("/members");
+        window.location.replace("/home");
         // If there's an error, handle it by throwing up a bootstrap alert
       })
       .catch(handleLoginErr);
   }
 
   function handleLoginErr(err) {
-    $("#alert .msg").text(err.responseJSON);
+    $("#alert .msg").text("Please use a different email.");
     $("#alert").fadeIn(500);
   }
 });
