@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-module.exports = function(sequelize, DataTypes) {
-const Workout = sequelize.define("Workout", {
-    id: {
-        type: DataTypes.UUID,
-        defaultValue: sequelize.UUIDV4,
-        primaryKey: true,
-    },
-    name: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      unique: true, 
-    },
-})
-return Workout;
-}; 
-=======
 module.exports = function (sequelize, DataTypes) {
 
     const Workout = sequelize.define("Workout", {
@@ -40,4 +23,3 @@ module.exports = function (sequelize, DataTypes) {
     return Workout;
 
 };
->>>>>>> 9006afc7475d575b0f668c5678e11eb426200600
