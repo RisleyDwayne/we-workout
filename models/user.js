@@ -3,9 +3,16 @@ const bcrypt = require("bcryptjs");
 // Creating our User model
 module.exports = function(sequelize, DataTypes) {
   const User = sequelize.define("User", {
+<<<<<<< HEAD
 
     user_id:{
       type: DataTypes.INTEGER,
+=======
+    id:{
+      primaryKey: true,
+      type: DataTypes.UUID,
+      defaultValue: DataTypes.UUIDV4
+>>>>>>> 9006afc7475d575b0f668c5678e11eb426200600
     },
     // The email cannot be null, and must be a proper email before creation
     email: {
@@ -35,5 +42,9 @@ module.exports = function(sequelize, DataTypes) {
       null
     );
   });
+
+  User.associate = (models) => {
+    User.hasMany(models.Workout)
+  };
   return User;
 };

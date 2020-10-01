@@ -37,20 +37,65 @@ form.createWorkout {
 .form-header {
   font-family: 'Passion One', cursive;
   color: rgb(0, 0, 0);
-  margin-bottom: 25px;
+  margin-bottom: 40px;
 }
 
+/* Create workout file
+img container */
+.img-container {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+
+/* img */
+#type-of-exercise {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  height: 320px;
+  width: 550px;
+}
+  @media screen and (max-width: 500px) {
+    #type-of-exercise{
+  height: 200px;
+  width: 300px;
+    }
+}
+
+/* Create workout file
+Centered text over img */
+#img-title {
+  font-family: 'Passion One', cursive;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(0, 0, 0, 0.4);
+  width: 100%;
+}
+
+/* Create workout file
+"Select exercises" */
 .select-list-title {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-weight: bold;
   margin-top: 25px;
 }
 
+/* Create workout file
+Type of exercise header- upper body, lower, cardio, equipment */
 .body-list-title {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   margin-top: 25px;
+  color: white;
+  background-color: black;
+  font-family: 'Passion One', cursive;
+  font-size: 32px;
+  width: 100%;
 }
 
+/* handlebars form */
 .form-group {
   text-align: center;
 }
@@ -73,6 +118,7 @@ input {
   margin-bottom: 0px;
   height: 50px;
   width: 300px;
+  margin-bottom: 50px;
 }
 
 /* text and link to go to sign up/login below submit button */
@@ -81,59 +127,31 @@ input {
  margin-top: 0px;
 }
 
+/* footer */
+.navbar {
+  background-color: white;
+}
 
-
-
-/* style below was moved to other css files but here just incase */
-
-/* HOMEPAGE */
-/* 
-.homePage_banner {
+.nav-link {
+  color: white;
   text-align: center;
-  background-color: black;
 }
 
-.homePage_buttons1 {
-  display: flex;
-  justify-content: center;
-  margin-top: 50px;
-  margin-right: 50px;
-  margin-left: 50px;
+#empty {
+padding: 25px;
+margin: 25px;
 }
 
-.homePage_buttons2 {
-  display: flex;
-  justify-content: center;
-  margin-top: 50px;
-  margin-right: 50px;
-  margin-left: 50px;
-  margin-bottom: 50px;
+@media screen and (min-width:500px){
+.linkImage {
+  width: 80px;
+  height: 80px;
+}
 }
 
-.img1,
-.img2,
-.img3,
-.img4 {
-  margin-left: 20px;
-  margin-right: 20px;
-} */
-
-/* @media screen and (max-width:374px){
-  .homePage_buttons1 {
-    width: 50px;
-    height: 50px;
-  }
-
-  .homePage_buttons2 {
-    width: 50px;
-    height: 50px;
-  }
-} */
-/* 
-.exersiseList {
-  justify-content: center;
-
+@media screen and (max-width:500px){
+.appImage {
+  width: 100%;
+  margin-left: 0px;
 }
-.selectpicker {
-  width: 'auto'
-} */
+}

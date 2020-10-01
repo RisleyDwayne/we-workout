@@ -11,8 +11,8 @@ $(document).ready(() => {
   signUpForm.on("submit", event => {
     event.preventDefault();
     const userData = {
-      fname: fnameInput.val.trim(),
-      lname: lnameInput.val.trim(),
+      fname: fnameInput.val().trim(),
+      lname: lnameInput.val().trim(),
       email: emailInput.val().trim(),
       password: passwordInput.val().trim(),
       dob: dobInput.val().trim()
@@ -30,7 +30,7 @@ $(document).ready(() => {
     dobInput.val("");
   });
 
-  // Does a post to the signup route. If successful, we are redirected to the members page
+  // Does a post to the signup route. If successful, we are redirected to the homePage page
   // Otherwise we log any errors
   function signUpUser(fname, lname, email, password, dob) {
     $.post("/api/signup", {
@@ -41,14 +41,14 @@ $(document).ready(() => {
       dob: dob,
     })
       .then(() => {
-        window.location.replace("/members");
+        window.location.replace("/homePage");
         // If there's an error, handle it by throwing up a bootstrap alert
       })
       .catch(handleLoginErr);
   }
 
   function handleLoginErr(err) {
-    $("#alert .msg").text(err.responseJSON);
+    $("#alert .msg").text("Please use a different email.");
     $("#alert").fadeIn(500);
   }
 });
