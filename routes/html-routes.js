@@ -32,15 +32,55 @@ module.exports = function(app) {
   app.get("/homePage", isAuthenticated, (req, res) => {
     res.sendFile(path.join(__dirname, "../public/homePage.html"));
   });
+  //-----------exercise list handlebars route
   app.get("/exercises", (req, res) => {
     const hbspayload = {
       exercises: [
         {
           title: "exercise type",
-          text: "exercise explination"
+          text: "exercise explination",
+          style: "exercise_workout.css"
         }
       ]
     };
     res.render("exerciseList", hbspayload)
   });
+
+    //-----------exercise list handlebars route
+    app.get("/myworkout", (req, res) => {
+      const hbspayload = {
+        exercises: [
+          {
+            title: "exercise type",
+            text: "exercise explination",
+            style: "exercise_workout.css"
+          }
+        ]
+      };
+      res.render("exerciseList", hbspayload)
+    });
+  //--------createworkout handlebars route
+
+  app.get("/createworkout", (req, res) => {
+    const hbspayload = {
+      upperBodyExercises: [
+        {
+          exercise: "exercise name",
+        }
+      ],
+      lowerBodyExercises: [
+        {
+          exercise: "exercise name",
+        }
+      ],
+      equipmentExercises: [
+        {
+          exercise: "exercise name",
+        }
+      ]
+    };
+    res.render("createWorkout", hbspayload)
+  });
 };
+
+
