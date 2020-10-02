@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Passion+One:wght@400;900&display=swap" rel="stylesheet">
-    <!-- <link href="stylesheets/exercise_workout.css" rel="stylesheet"> -->
     <link href="stylesheets/style.css" rel="stylesheet">
 
 
@@ -22,7 +21,6 @@
 
     <div class="jumbotron  header_custom">
         <div class="row justify-content-center row-margin">
-            <!-- <img src="./assets/images/weworkout-cropped.JPG" class="img-fluid" alt="Responsive image"> -->
             <img src="./assets/images/weworkout-cropped.JPG" class="headerImg" alt="Responsive image">
 
         </div>
@@ -34,16 +32,12 @@
             <div class="col-sm">
                 <form class="createWorkout">
                     <h1 class="text-center form-header">Choose a Workout to get you started</h1>
-                    <!-- <div class="form-group">
-                        <input type="text" class="form-control" id="workout-name-input" placeholder="Workout Name">
-                    </div> -->
-                    <!-- exercises form group -->
                     <div class="form-group">
-                        <!-- <h5 class="select-list-title">Select Exercises</h5> -->
+                        <!-- Workout 1 Lower -->
                         <a class= "btn" data-toggle="collapse" href="#WeWorkout1Collapse" role="button" aria-expanded="false" aria-controls="collapseExample">
                         <div class="container img-container" id="upperBody-img-container">
-                            <div class="row justify-content-center row-margin" class = "btn btn-link" data-toggle="collapse">
-                                <img id="type-of-exercise" src="./assets/images/exercise.jpg" alt="Responsive image" />
+                            <div class="row justify-content-center row-margin">
+                                <img id="type-of-exercise" src="./assets/images/exercise.jpg" alt="Back body image" />
                                 <h1 id="img-title">Thicc or Treat</h1>
                             </div>
                         </div>
@@ -52,139 +46,118 @@
                             <div class="card card-body">
                                 <ul class="list-group">
                                     <li class="list-group-item d-flex justify-content-between align-items-center">
-                                      Lunges
+                                        Lunges
                                       <span class="badge badge-secondary badge-pill">10</span>
                                     </li>
                                     <li class="list-group-item d-flex justify-content-between align-items-center">
-                                      Dapibus ac facilisis in
+                                        Squats
                                       <span class="badge badge-secondary badge-pill">10</span>
                                     </li>
                                     <li class="list-group-item d-flex justify-content-between align-items-center">
-                                      Morbi leo risus
+                                        Jump Squats
+                                      <span class="badge badge-secondary badge-pill">10</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        Goblet Squats
                                       <span class="badge badge-secondary badge-pill">10</span>
                                     </li>
                                   </ul>
                             </div>
                           </div>
-                        <div style="display: none" id="hidden-upperBody-exercises">
-                            <p class="body-list-title" id="upperBody-exercises-header">Upper Body:</p>
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <div class="input-group-text">
-                                        <input type="checkbox" id="exercise-input" aria-label="select-exercise">
-                                    </div>
-                                </div>
-                                <div type="text" class="form-control" aria-label="exercise"> {{ upper body exercise }}
-                                </div>
-                            </div>
-                        </div>
+                         <!-- Workout 2 HIIT -->
+                        <a class= "btn" data-toggle="collapse" href="#WeWorkout2Collapse" role="button" aria-expanded="false" aria-controls="collapseExample">
                         <div class="container img-container" id="lowerBody-img-container">
                             <div class="row justify-content-center row-margin">
                                 <img id="type-of-exercise" src="./assets/images/weights.jpg" alt="Lower Body Exercises">
                                 <h1 id="img-title">I'd HIIT That</h1>
                             </div>
                         </div>
-                        <div style="display: none" id="hidden-lowerBody-exercises">
-                            <p class="body-list-title" id="lowerBody-exercises-header">Oh my Quad, Becky! Look at her
-                                squat</p>
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <div class="input-group-text">
-                                        <input type="checkbox" id="exercise-input" aria-label="select-exercise">
-                                    </div>
-                                </div>
-                                <div type="text" class="form-control" aria-label="exercise"> {{ lower body exercise }}
-                                </div>
+                        </a>
+                        <div class="collapse" id="WeWorkout2Collapse">
+                            <div class="card card-body">
+                                <ul class="list-group">
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        Lunges
+                                      <span class="badge badge-secondary badge-pill">10</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        Squats
+                                      <span class="badge badge-secondary badge-pill">10</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        Jump Squats
+                                      <span class="badge badge-secondary badge-pill">10</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        Goblet Squats
+                                      <span class="badge badge-secondary badge-pill">10</span>
+                                    </li>
+                                  </ul>
                             </div>
-                        </div>
+                          </div>
+                        <!-- Workout 3 Cardio -->
+                        <a class= "btn" data-toggle="collapse" href="#WeWorkout3Collapse" role="button" aria-expanded="false" aria-controls="collapseExample">
                         <div class="container img-container" id="cardio-img-container">
                             <div class="row justify-content-center row-margin">
                                 <img id="type-of-exercise" src="./assets/images/run.jpg" alt="Cardio Exercises">
                                 <h1 id="img-title">Run like you stole something</h1>
                             </div>
                         </div>
-                        <div style="display: none" id="hidden-cardio-exercises">
-                            <p class="body-list-title" id="cardio-exercises-header">Run for your life</p>
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <div class="input-group-text">
-                                        <input type="checkbox" id="exercise-input" aria-label="select-exercise">
-                                    </div>
-                                </div>
-                                <div type="text" class="form-control" aria-label="exercise"> {{ cardio exercise }}
-                                </div>
+                        </a>
+                        <div class="collapse" id="WeWorkout3Collapse">
+                            <div class="card card-body">
+                                <ul class="list-group">
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        Lunges
+                                      <span class="badge badge-secondary badge-pill">10</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        Squats
+                                      <span class="badge badge-secondary badge-pill">10</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        Jump Squats
+                                      <span class="badge badge-secondary badge-pill">10</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        Goblet Squats
+                                      <span class="badge badge-secondary badge-pill">10</span>
+                                    </li>
+                                  </ul>
                             </div>
-                        </div>
+                          </div>
+                        <!-- Workout 4 -->
+                        <a class= "btn" data-toggle="collapse" href="#WeWorkout4Collapse" role="button" aria-expanded="false" aria-controls="collapseExample">
                         <div class="container img-container" id="equipment-img-container">
                             <div class="row justify-content-center row-margin">
                                 <img id="type-of-exercise" src="./assets/images/row.jpg" alt="With Equipment Exercises">
                                 <h1 id="img-title">Do it for the donuts</h1>
                             </div>
                         </div>
-                        <div style="display: none" id="hidden-equipment-exercises">
-                            <p class="body-list-title" id="equipment-exercises-header">With Equipment:</p>
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <div class="input-group-text">
-                                        <input type="checkbox" id="exercise-input" aria-label="select-exercise">
-                                    </div>
-                                </div>
-                                <div type="text" class="form-control" aria-label="exercise">
-                                    {{ withEquipment exercise }}
-                                </div>
+                        </a>
+                        <div class="collapse" id="WeWorkout4Collapse">
+                            <div class="card card-body">
+                                <ul class="list-group">
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        Lunges
+                                      <span class="badge badge-secondary badge-pill">10</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        Squats
+                                      <span class="badge badge-secondary badge-pill">10</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        Jump Squats
+                                      <span class="badge badge-secondary badge-pill">10</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        Goblet Squats
+                                      <span class="badge badge-secondary badge-pill">10</span>
+                                    </li>
+                                  </ul>
                             </div>
-                        </div>
-
-
-
-                        <!-- 
-    <div class="container">
-        <div class="container img-container" id="upperBody-img-container">
-            <div class="row justify-content-center row-margin">
-                <img id="type-of-exercise" src="./assets/images/exercise.jpg"
-                    alt="Lower Body Exercises">
-                <h1 id="img-title">Thicc or Treat</h1>
-            </div>
-        </div>
-         <div class="row">
-            <div class="col-sm img-fluid premadeImages" >
-                <div id="premadeImg2" aria-label="premadeImg2">Thicc or Treat</div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm img-fluid premadeImages" >
-                <div id="premadeImg3" aria-label="premadeImg3">Thicc or Treat</div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm img-fluid premadeImages" >
-                <div id="premadeImg4" aria-label="premadeImg4">Thicc or Treat</div>
-            </div>
-        </div> 
-    </div> -->
-
-                        <!-- <div class="container">
-            <div class="row">
-                <div class="col-sm img-fluid premadeImages" >
-                    <div id="premadeImg1" aria-label="premadeImg1">Thicc or Treat</div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm img-fluid premadeImages" >
-                    <div id="premadeImg2" aria-label="premadeImg2">Thicc or Treat</div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm img-fluid premadeImages" >
-                    <div id="premadeImg3" aria-label="premadeImg3">Thicc or Treat</div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm img-fluid premadeImages" >
-                    <div id="premadeImg4" aria-label="premadeImg4">Thicc or Treat</div>
-                </div>
-            </div>
-        </div> -->
+                          </div>
+   
 
                         <!-- blank row below card -->
                         <div class="row mb-10" id="empty"></div>
@@ -222,8 +195,11 @@
                         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
                             integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
                             crossorigin="anonymous"></script>
-                            <!-- <script type="text/javascript" src="./js/WeWorkout.js"></script> -->
-
+                    </div>        <!-- <script type="text/javascript" src="./js/WeWorkout.js"></script> -->
+                </form>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
