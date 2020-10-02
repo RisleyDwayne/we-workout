@@ -39,28 +39,26 @@ module.exports = function (app) {
         {
           title: "exercise type",
           text: "exercise explination",
-          style: "exercise_workout.css"
         }
       ]
-    };
-    res.render("exerciseList", hbspayload)
-  });
+  };
+  res.render("exerciseList", hbspayload)
+});
 
-  //-----------exercise list handlebars route
-  app.get("/myworkout", (req, res) => {
-    const hbspayload = {
-      workout: [
-        {
-          title: "workout type",
-          exercise: [
-            {
-              exerciseName: "exercise name",
-            }
-          ],
-  
-          style: "exercise_workout.css"
-        }
-      ]
+//-----------exercise list handlebars route
+app.get("/myworkout", (req, res) => {
+  const hbspayload = {
+    workout: [
+      {
+        title: "workout type",
+        exercise: [
+          {
+            exerciseName: "exercise name",
+          }
+        ],
+
+      }
+    ]
   };
   res.render("myWorkouts", hbspayload)
 });
