@@ -4,7 +4,7 @@ const path = require("path");
 // Requiring our custom middleware for checking if a user is logged in
 const isAuthenticated = require("../config/middleware/isAuthenticated");
 
-module.exports = function(app) {
+module.exports = function (app) {
   app.get("/", (req, res) => {
     // If the user already has an account send them to the home page
     if (req.user) {
@@ -46,41 +46,46 @@ module.exports = function(app) {
     res.render("exerciseList", hbspayload)
   });
 
-    //-----------exercise list handlebars route
-    app.get("/myworkout", (req, res) => {
-      const hbspayload = {
-        exercises: [
-          {
-            title: "exercise type",
-            text: "exercise explination",
-            style: "exercise_workout.css"
-          }
-        ]
-      };
-      res.render("exerciseList", hbspayload)
-    });
-  //--------createworkout handlebars route
-
-  app.get("/createworkout", (req, res) => {
+  //-----------exercise list handlebars route
+  app.get("/myworkout", (req, res) => {
     const hbspayload = {
-      upperBodyExercises: [
+      workout: [
         {
-          exercise: "exercise name",
-        }
-      ],
-      lowerBodyExercises: [
-        {
-          exercise: "exercise name",
-        }
-      ],
-      equipmentExercises: [
-        {
-          exercise: "exercise name",
+          title: "workout type",
+          exercise: [
+            {
+              exerciseName: "exercise name",
+            }
+          ],
+  
+          style: "exercise_workout.css"
         }
       ]
-    };
-    res.render("createWorkout", hbspayload)
-  });
+  };
+  res.render("myWorkouts", hbspayload)
+});
+//--------createworkout handlebars route
+
+app.get("/createworkout", (req, res) => {
+  const hbspayload = {
+    upperBodyExercises: [
+      {
+        exercise: "exercise name",
+      }
+    ],
+    lowerBodyExercises: [
+      {
+        exercise: "exercise name",
+      }
+    ],
+    equipmentExercises: [
+      {
+        exercise: "exercise name",
+      }
+    ]
+  };
+  res.render("createWorkout", hbspayload)
+});
 };
 
 
