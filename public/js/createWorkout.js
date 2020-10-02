@@ -68,7 +68,6 @@ $(document).ready(() => {
         .trim(),
       exercises: selectedWorkout.is(":checked")
     };
-    console.log(newWorkout);
     //if worout name exists
     if (newWorkout.workoutName === "" || newWorkout.exercises === false) {
       console.log(newWorkout.workoutName, newWorkout.exercises);
@@ -77,9 +76,10 @@ $(document).ready(() => {
     }
     //return an alert that says already exists choose a new name
     // If user entered a workout name and selected a exercise, run the newWorkout function
-    createWorkout(newWorkout.workoutName);
-    workoutName.val("");
+    // createWorkout(newWorkout.workoutName);
+    // workoutName.val("");
     // exercises.val(false);
+    createWorkout();
   });
 
   // Does a post to the signup route. If successful, we are redirected to the my workouts page
