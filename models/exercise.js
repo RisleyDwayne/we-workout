@@ -1,7 +1,3 @@
-// Dependencies
-
-
-
 // Exercie Module
 
 module.exports = function (sequelize, DataTypes) {
@@ -17,6 +13,11 @@ module.exports = function (sequelize, DataTypes) {
       allowNull: false,
       unique: true,
     },
+    type: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      unique: true,
+    }
     
 
   });

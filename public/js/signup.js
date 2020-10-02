@@ -48,7 +48,7 @@ $(document).ready(() => {
   }
 
   function handleLoginErr(err) {
-    $("#alert .msg").text(err.responseJSON);
+    $("#alert .msg").text("Please use a different email.");
     $("#alert").fadeIn(500);
   }
 });

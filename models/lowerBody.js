@@ -4,7 +4,7 @@ module.exports = function (sequelize, DataTypes) {
       id: {
         primaryKey: true,
         type: DataTypes.UUID,
-        defaultValue: sequelize.UUIDV4,
+        defaultValue: DataTypes.UUIDV4,
       },
       name: {
         type: DataTypes.STRING,
@@ -16,5 +16,6 @@ module.exports = function (sequelize, DataTypes) {
       },
     });
   
+    
     return LowerBody;
   };

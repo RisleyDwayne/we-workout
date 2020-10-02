@@ -18,7 +18,7 @@ module.exports = function(app) {
     if (req.user) {
       res.redirect("/homePage");
     }
-    res.sendFile(path.join(__dirname, "../public/login.html"));
+    res.sendFile(path.join(__dirname, "../public/homePage.html"));
   });
 
   // Route for logging user out
