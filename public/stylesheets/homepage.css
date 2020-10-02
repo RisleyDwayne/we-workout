@@ -1,6 +1,7 @@
-form.signup,
-form.login {
-  margin-top: 50px;
+/* prevents side scroll bar on small devices */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 .homePage_banner {
@@ -11,7 +12,6 @@ form.login {
 #login_pic {
   height: 100px;
 }
-
 
 .homePage_buttons1 {
     display: flex;
@@ -79,30 +79,32 @@ form.login {
     margin-right: 20px;
 } */
 
-  .navbar {
-    background-color: black;
-  }
-
-  .nav-link {
-    color: white;
-    text-align: center;
-}
-
+/* empty space prior to footer to prevent overlap */
 #empty {
   padding: 25px;
-  margin: 25px;
+  margin: 50px;
+  }
+
+/* footer sticky navbar*/
+.navbar {
+  background-color: white;
 }
 
- @media screen and (min-width:500px){
+.linkImage {
+  width: 53px;
+  height: auto;
+}
+
+@media screen and (min-width:500px){
+.linkImage {
+  width: 80px;
+  height: auto;
+}
+}
+
+@media screen and (max-width:360px){
   .linkImage {
-    width: 80px;
-    height: 80px;
+    width: 40px;
+    height: auto;
   }
-}
-
-@media screen and (max-width:500px){
-  .appImage {
-    width: 100%;
-    margin-left: 0px;
   }
-}

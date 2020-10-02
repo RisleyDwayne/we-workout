@@ -4,7 +4,7 @@ const path = require("path");
 // Requiring our custom middleware for checking if a user is logged in
 const isAuthenticated = require("../config/middleware/isAuthenticated");
 
-module.exports = function(app) {
+module.exports = function (app) {
   app.get("/", (req, res) => {
     // If the user already has an account send them to the home page
     if (req.user) {
@@ -32,15 +32,58 @@ module.exports = function(app) {
   app.get("/homePage", isAuthenticated, (req, res) => {
     res.sendFile(path.join(__dirname, "../public/homePage.html"));
   });
+  //-----------exercise list handlebars route
   app.get("/exercises", (req, res) => {
     const hbspayload = {
       exercises: [
         {
           title: "exercise type",
-          text: "exercise explination"
+          text: "exercise explination",
         }
       ]
-    };
-    res.render("exerciseList", hbspayload)
-  });
+  };
+  res.render("exerciseList", hbspayload)
+});
+
+//-----------exercise list handlebars route
+app.get("/myworkout", (req, res) => {
+  const hbspayload = {
+    workout: [
+      {
+        title: "workout type",
+        exercise: [
+          {
+            exerciseName: "exercise name",
+          }
+        ],
+
+      }
+    ]
+  };
+  res.render("myWorkouts", hbspayload)
+});
+//--------createworkout handlebars route
+
+app.get("/createworkout", (req, res) => {
+  const hbspayload = {
+    upperBodyExercises: [
+      {
+        exercise: "exercise name",
+      }
+    ],
+    lowerBodyExercises: [
+      {
+        exercise: "exercise name",
+      }
+    ],
+    equipmentExercises: [
+      {
+        exercise: "exercise name",
+      }
+    ]
+  };
+  res.render("createWorkout", hbspayload)
+});
 };
+
+

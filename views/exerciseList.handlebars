@@ -11,8 +11,11 @@
 </div>
 
 <div class="container">
+  </br>
 
-  <div class="form-group">
+  <h1>Exersises:</h1>
+</br>
+  {{!-- <div class="form-group">
     </br>
     <label for="sel1">
       <h3>exercise type:</h3>
@@ -29,7 +32,7 @@
         <option>Cardio</option>
       </optgroup>
     </select>
-  </div>
+  </div> --}}
 
   <div class="row">
     {{#each exercises}}
@@ -45,25 +48,28 @@
   </div>
 </div>
 
+<!-- blank row below card -->
+<div class="row mb-10" id="empty"></div>
+
 <!-- sticky footer -->
 <nav class="navbar fixed-bottom justify-content-center">
-  <ul class="nav justify-content-center">
-    <li class="nav-item">
-      <a class="nav-link" href="workout.html"><img class="linkImage" src='./assets/images/WeWorkIcon.JPG'
-          alt="alternate_text" width="50px" height="50px"></a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="workout.html"><img class="linkImage" src='./assets/images/MyWorkoutIcon.JPG'
-          alt="alternate_text" width="50px" height="50px"></a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="Excercises"><img class="linkImage" src='./assets/images/icon.JPG' alt="alternate_text"
-          width="50px" height="50px"></a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="createWorkout.html" target="_blank"><img class="linkImage"
-          src='./assets/images/CreateIcon.JPG' alt="alternate_text" width="50px" height="50px"></a>
-    </li>
-  </ul>
+    <ul class="nav justify-content-center">
+        <li class="nav-item">
+            <a class="nav-link" href="/weWorkouts.html"><img class="linkImage" src='./assets/images/IconWe.png'
+                    alt="We Workouts"></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/myworkout"><img class="linkImage" src='./assets/images/IconMy.png'
+                    alt="My Workouts"></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/exercises"><img class="linkImage"
+                    src='./assets/images/IconAllExercises.png' alt="Exercises"></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/createworkout"><img class="linkImage" src='./assets/images/IconCreate.png'
+                    alt="Create Workout"></a>
+        </li>
+    </ul>
+    <!-- end sticky footer -->
 </nav>
-<!-- end sticky footer -->
