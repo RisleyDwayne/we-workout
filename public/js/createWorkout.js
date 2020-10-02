@@ -71,7 +71,8 @@ $(document).ready(() => {
     console.log(newWorkout);
     //if worout name exists
     if (newWorkout.workoutName === "" || newWorkout.exercises === false) {
-      $("#alert").css("display", "block");
+      console.log(newWorkout.workoutName, newWorkout.exercises);
+      // $("#alert").css("display", "block");
       return;
     }
     //return an alert that says already exists choose a new name
@@ -81,7 +82,7 @@ $(document).ready(() => {
     // exercises.val(false);
   });
 
-  // Does a post to the signup route. If successful, we are redirected to the members page
+  // Does a post to the signup route. If successful, we are redirected to the my workouts page
   // Otherwise we log any errors
   function createWorkout(workoutName, exercises) {
     $.post("/myworkout", {
