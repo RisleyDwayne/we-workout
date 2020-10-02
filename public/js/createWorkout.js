@@ -63,31 +63,34 @@ $(document).ready(() => {
   createWorkoutForm.on("submit", event => {
     event.preventDefault();
     const newWorkout = {
-      woroutName: $("#workout-name-input")
+      workoutName: $("#workout-name-input")
         .val()
         .trim(),
       exercises: selectedWorkout.is(":checked")
     };
     //if worout name exists
-    if (!newWorkout.workoutName || !newWorkout.exercises) {
+    if (newWorkout.workoutName === "" || newWorkout.exercises === false) {
+      console.log(newWorkout.workoutName, newWorkout.exercises);
+      // $("#alert").css("display", "block");
       return;
     }
     //return an alert that says already exists choose a new name
     // If user entered a workout name and selected a exercise, run the newWorkout function
-    createWorkout(newWorkout.workoutName, newWorkout.exercises);
-    workoutName.val("");
-    exercises.val("");
+    // createWorkout(newWorkout.workoutName);
+    // workoutName.val("");
+    // exercises.val(false);
+    createWorkout();
   });
 
-  // Does a post to the signup route. If successful, we are redirected to the members page
+  // Does a post to the signup route. If successful, we are redirected to the my workouts page
   // Otherwise we log any errors
   function createWorkout(workoutName, exercises) {
-    $.post("/api/myWorkouts", {
+    $.post("/myworkout", {
       workoutName: workoutName,
       exercises: exercises
     })
       .then(() => {
-        window.location.replace("/myWorkouts");
+        window.location.replace("/myworkout");
         // error alert
       })
       .catch(handleDuplicateErr);

@@ -127,31 +127,32 @@ input {
  margin-top: 0px;
 }
 
-/* footer */
+/* empty space prior to footer to prevent overlap */
+#empty {
+  padding: 25px;
+  margin: 25px;
+  }
+
+/* footer sticky navbar*/
 .navbar {
   background-color: white;
 }
 
-.nav-link {
-  color: white;
-  text-align: center;
-}
-
-#empty {
-padding: 25px;
-margin: 25px;
+.linkImage {
+  width: 53px;
+  height: auto;
 }
 
 @media screen and (min-width:500px){
 .linkImage {
   width: 80px;
-  height: 80px;
+  height: auto;
 }
 }
 
-@media screen and (max-width:500px){
-.appImage {
-  width: 100%;
-  margin-left: 0px;
-}
-}
+@media screen and (max-width:360px){
+  .linkImage {
+    width: 40px;
+    height: auto;
+  }
+  }
