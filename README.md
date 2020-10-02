@@ -6,11 +6,11 @@
 
 We Workout is a fitness app for users that want to workout at home and lose that quarentine fifteen. User's can select pre-made workouts from WAPP's databse or build their own personalized workouts of exercises with or without weights. This app makes it easy for friends to socially distance and use that WAPP database to workout virtually together.
 
-<br>
+</br>
 
-<img src="" alt="screenshot of application"/>
+<img src="https://raw.githubusercontent.com/RisleyDwayne/we-workout/master/public/assets/images/ScreenshotFullscreen.png" alt="screenshot full screen of application"/>
 
-<br>
+</br>
 
 ## Table of Contents
 
@@ -22,13 +22,17 @@ We Workout is a fitness app for users that want to workout at home and lose that
 
 * [Technologies Used](##Technologies-Used)
 
-* [Resources](##Resources)
-
 * [Contact Developers](##Contact-Developers)
 
 ## Application Link
 
 [Application Deployed on Heroku]()
+
+</br>
+
+<img src="https://raw.githubusercontent.com/RisleyDwayne/we-workout/master/public/assets/images/ScreenshotMobile.png" alt="screenshot of mobile application"/>
+
+</br>
 
 ## Application Requirements
 
@@ -57,10 +61,6 @@ UNH's Coding Bootcamp Project 2 requirements
 ## Technologies Used
 
 MySQL, Node.js, Express, Express-Handlebars, ESLint, jQuery, Heroku, CSS, HTML, Bootstrap, Husky, Trello, Balsamiq
-
-## Resources
-
-[Husky](https://github.com/typicode/husky), [](), []()
 
 ## Contact Developers
 
