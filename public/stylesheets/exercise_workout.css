@@ -1,3 +1,9 @@
+/* prevents side scroll bar on small devices */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 .header_custom {
   background-color:black
   }
@@ -64,10 +70,32 @@ margin: 0px; }
   margin: 20px;
 }
 
+/* empty space prior to footer to prevent overlap */
+#empty {
+  padding: 25px;
+  margin: 25px;
+  }
+
+/* footer sticky navbar*/
 .navbar {
-  background-color: black;
+  background-color: white;
 }
-.nav-link {
-  color: white;
-  text-align: center;
+
+.linkImage {
+  width: 53px;
+  height: auto;
 }
+
+@media screen and (min-width:500px){
+.linkImage {
+  width: 80px;
+  height: auto;
+}
+}
+
+@media screen and (max-width:360px){
+  .linkImage {
+    width: 40px;
+    height: auto;
+  }
+  }
