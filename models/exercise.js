@@ -6,19 +6,25 @@ module.exports = function (sequelize, DataTypes) {
     id: {
       primaryKey: true,
       type: DataTypes.UUID,
-      defaultValue: sequelize.UUIDV4,
+      defaultValue: DataTypes.UUIDV4,
     },
     name: {
       type: DataTypes.STRING,
       allowNull: false,
       unique: true,
     },
-    type: {
+    body_zone: {
       type: DataTypes.STRING,
       allowNull: false,
-      unique: true,
+    },
+    equipment_used: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    exercise_description: {
+      type: DataTypes.STRING,
+      allowNull: false,
     }
-    
 
   });
 Exercise.associate = (models)=> {

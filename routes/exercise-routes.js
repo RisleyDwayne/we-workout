@@ -22,6 +22,8 @@ var db = require("../models");
         });
     });
 
+    router.get("/:upperbody", )
+
     router.post("/", function (req, res) {
         db.Exercise.create(req.body).then(function (dbExercise) {
             res.json(dbExercise);
