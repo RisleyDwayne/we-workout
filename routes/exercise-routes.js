@@ -4,6 +4,7 @@ const exercise = require("../models/exercise");
 
 
 router.get("/all", function (req, res) {
+<<<<<<< HEAD
     db.Exercise.all(function(data) {
         var hbsObject = {
           db: data
@@ -11,6 +12,15 @@ router.get("/all", function (req, res) {
         console.log(hbsObject);
         res.render("index", hbsObject);
       });
+=======
+    db.Exercise.findAll({
+        include: [db.Post]
+    }).then(function (dbExercise) {
+        res.render("exercises", {
+            exercise: dbExercise,
+        });
+    });
+>>>>>>> d947170e9eaab24fbc53218a27b8548f4fcd026c
 });
 
 router.get("/:id", function (req, res) {
@@ -22,9 +32,13 @@ router.get("/:id", function (req, res) {
         include: [db.Post]
     }).then(function (dbExercise) {
         res.render("exercise", {
+<<<<<<< HEAD
             exercise: dbExercise,
             name: exercise_name,
             description: exercise_description,
+=======
+            
+>>>>>>> d947170e9eaab24fbc53218a27b8548f4fcd026c
         });
     });
 });
