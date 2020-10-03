@@ -6,7 +6,9 @@ router.get("/all", function (req, res) {
     db.Exercise.findAll({
         include: [db.Post]
     }).then(function (dbExercise) {
-        res.json(dbExercise);
+        res.render("exercises", {
+            exercise: dbExercise,
+        });
     });
 });
 
@@ -18,7 +20,9 @@ router.get("/:id", function (req, res) {
         },
         include: [db.Post]
     }).then(function (dbExercise) {
-        res.json(dbExercise);
+        res.render("exercise", {
+            
+        });
     });
 });
 
