@@ -1,26 +1,13 @@
 const router = require("express").Router();
 var db = require("../models");
-const exercise = require("../models/exercise");
 
 
 router.get("/all", function (req, res) {
-<<<<<<< HEAD
-    db.Exercise.all(function(data) {
-        var hbsObject = {
-          db: data
-        };
-        console.log(hbsObject);
-        res.render("index", hbsObject);
-      });
-=======
     db.Exercise.findAll({
         include: [db.Post]
     }).then(function (dbExercise) {
-        res.render("exercises", {
-            exercise: dbExercise,
-        });
+        res.json(dbExercise);
     });
->>>>>>> d947170e9eaab24fbc53218a27b8548f4fcd026c
 });
 
 router.get("/:id", function (req, res) {
@@ -31,58 +18,40 @@ router.get("/:id", function (req, res) {
         },
         include: [db.Post]
     }).then(function (dbExercise) {
-        res.render("exercise", {
-<<<<<<< HEAD
-            exercise: dbExercise,
-            name: exercise_name,
-            description: exercise_description,
-=======
-            
->>>>>>> d947170e9eaab24fbc53218a27b8548f4fcd026c
-        });
+        res.json(dbExercise);
     });
 });
 
 router.get("/:upperbody", function (req, res) {
     db.Exercise.findAll({
         where: {
-            bodyZone: req.params.body_zone.zone.value[1],
+            body_zone: req.params.upperbody,
         },
         include: [db.Post]
     }). then(function (dbExercise){
-        res.render("upperbody", {
-            exercise: dbExercise,
-            body_zone: {value: 'Upper Body'},
-        }
-        );
+        res.json(dbExercise);
     });
 });
 
 router.get("/:lowerbody", function (req, res) {
     db.Exercise.findAll({
         where: {
-            body_zone: req.params.body_zone.zone.value[2],
+            body_zone: req.params.lowerbody,
         },
         include: [db.Post]
     }). then(function (dbExercise){
-        res.render("lowerbody", {
-            exercise: dbExercise,
-            body_zone: {value: 'Lower Body'},
-        });
+        res.json(dbExercise);
     });
 });
 
 router.get("/:cardio", function (req, res) {
     db.Exercise.findAll({
         where: {
-            body_zone: req.params.body_zone.zone.value[3],
+            body_zone: req.params.cardio,
         },
         include: [db.Post]
     }). then(function (dbExercise){
-        res.render("cardio", {
-            exercise: dbExercise,
-            body_zone: {value: "Cario"},
-        });
+        res.json(dbExercise);
     });
 });
 

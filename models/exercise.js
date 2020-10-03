@@ -5,9 +5,8 @@ module.exports = function (sequelize, DataTypes) {
     // 
     id: {
       primaryKey: true,
-      type: DataTypes.INT,
-      defaultValue: sequelize.INT,
-      AUTO_INCREMENT: true,
+      type: DataTypes.UUID,
+      defaultValue: sequelize.UUIDV4,
     },
     name: {
       type: DataTypes.STRING,
