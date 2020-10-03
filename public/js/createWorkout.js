@@ -1,7 +1,7 @@
 $(document).ready(() => {
   // Create workout form and input
   const createWorkoutForm = $("form.createWorkout");
-  const selectedWorkout = $("input#exercise-input");
+  const selectedWorkout = $("input.exercise-input");
 
   //Upper body img hide and show exercises
   $("#upperBody-img-container").click(function() {
@@ -64,10 +64,11 @@ $(document).ready(() => {
     event.preventDefault();
     const newWorkout = {
       workoutName: $("#workout-name-input")
-        .val()
-        .trim(),
+      .val()
+      .trim(),
       exercises: selectedWorkout.is(":checked")
     };
+    console.log(newWorkout, selectedWorkout);
 
     //if worout name exists
     if (newWorkout.workoutName === "" || newWorkout.exercises === false) {
@@ -87,7 +88,7 @@ $(document).ready(() => {
       data: newWorkout
     }).then(() => {
       console.log("created new workout");
-      location.reload();
+      // location.reload();
     });
   });
 
