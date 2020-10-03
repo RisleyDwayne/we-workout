@@ -35,10 +35,10 @@ router.post("/signup", (req, res) => {
 });
 
 router.post("/workout", (req, res) => {
-  db.workout
+  db.Workout
     .create({
-      workout_name: req.body.workoutName,
-      exercise_id: req.body.exercises
+      name: req.body.workoutName,
+      ExerciseId: req.body.exercises
     })
     .then(() => {
       res.redirect(307, "/myworkout");
