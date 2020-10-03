@@ -70,6 +70,22 @@ margin: 0px; }
   margin: 20px;
 }
 
+.myWorkout_title {
+  font-size: 50px;
+  font-weight: bolder;
+  display: flex;
+  justify-content: center;
+}
+
+.mycard-title {
+  font-size: 30px;
+  font-weight: bolder;
+  background-color: white;
+  color: black;
+  display: flex;
+  justify-content: center;
+}
+
 /* empty space prior to footer to prevent overlap */
 #empty {
   padding: 25px;
