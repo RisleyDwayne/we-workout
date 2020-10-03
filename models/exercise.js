@@ -6,7 +6,7 @@ module.exports = function (sequelize, DataTypes) {
     id: {
       primaryKey: true,
       type: DataTypes.UUID,
-      defaultValue: DataTypes.UUIDV4,
+      defaultValue: sequelize.UUIDV4,
     },
     name: {
       type: DataTypes.STRING,
@@ -22,7 +22,7 @@ module.exports = function (sequelize, DataTypes) {
       allowNull: false,
     },
     exercise_description: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
       allowNull: false,
     }
 
@@ -31,7 +31,7 @@ Exercise.associate = (models)=> {
   Exercise.belongsToMany(models.Workout, {
     through: "ExerciseWorkout"
 });
-}
+};
 
 
   return Exercise;

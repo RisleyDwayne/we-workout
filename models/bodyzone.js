@@ -3,10 +3,18 @@ module.exports = (sequelize, DataTypes) => {
         id: {
             primaryKey: true,
             type: DataTypes.UUID,
-            defaultValue: DataTypes.UUIDV4,
+            defaultValue: DataTypes.UUID,
         },
-        name: {
-            
+        zone: {
+            type: DataTypes.ENUM,
+            values: ['Upper Body', 'Lower Body', 'Cardio'],
+            allowNull: false,
         }
     });
+
+    BodyZone.associate = (models) => {
+        BodyZone.belongsTo(models.Exercise)
+    };
+
+    return BodyZone;
 };
