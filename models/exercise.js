@@ -19,9 +19,17 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false
     },
     equipment_used: {
-      type: DataTypes.STRING,
+      type: DataTypes.BOOLEAN,
+      defaultValue: false,
       allowNull: false
     },
+
+    cardio: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+      defaultValue: false
+    },
+
     exercise_description: {
       type: DataTypes.TEXT,
       allowNull: false

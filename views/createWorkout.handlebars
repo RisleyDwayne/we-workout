@@ -27,16 +27,18 @@
                     </div>
                     <div style="display: none" id="hidden-upperBody-exercises">
                         <p class="body-list-title" id="upperBody-exercises-header">Upper Body:</p>
-                        {{#each upperBodyExercises}}
+                        {{#each exercises}}
+                        {{#ifEq this.body_zone "upperBodyExercises"}}
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
                                 <div class="input-group-text">
-                                    <input type="checkbox" id="exercise-input" aria-label="select-exercise">
+                                    <input data-exercise-id="{{this.id}}" type="checkbox" class="exercise-input" aria-label="select-exercise">
                                 </div>
                             </div>
-                            <div type="text" class="form-control" aria-label="exercise"> {{ this.exercise }}
+                            <div type="text" class="form-control" aria-label="exercise"> {{ this.name }}
                             </div>
                         </div>
+                         {{/ifEq}}
                         {{/each}}
                     </div>
                     {{!-- lower body --}}
@@ -48,16 +50,18 @@
                     </div>
                     <div style="display: none" id="hidden-lowerBody-exercises">
                         <p class="body-list-title" id="lowerBody-exercises-header">Lower Body:</p>
-                        {{#each lowerBodyExercises}}
+                        {{#each exercises}}
+                        {{#ifEq this.body_zone "lowerBodyExercises"}}
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
                                 <div class="input-group-text">
-                                    <input type="checkbox" id="exercise-input" aria-label="select-exercise">
+                                    <input data-exercise-id="{{this.id}}" type="checkbox" class="exercise-input" aria-label="select-exercise">
                                 </div>
                             </div>
-                            <div type="text" class="form-control" aria-label="exercise"> {{ this.exercise }}
+                            <div type="text" class="form-control" aria-label="exercise"> {{ this.name }}
                             </div>
                         </div>
+                         {{/ifEq}}
                         {{/each}}
                     </div>
                     {{!-- cardio --}}
@@ -69,16 +73,18 @@
                     </div>
                     <div style="display: none" id="hidden-cardio-exercises">
                         <p class="body-list-title" id="cardio-exercises-header">Cardio:</p>
-                        {{#each cardio-exercises}}
+                        {{#each exercises}}
+                        {{#if this.cardio }}
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
                                 <div class="input-group-text">
-                                    <input type="checkbox" id="exercise-input" aria-label="select-exercise">
+                                    <input data-exercise-id="{{this.id}}" type="checkbox" class="exercise-input" aria-label="select-exercise">
                                 </div>
                             </div>
-                            <div type="text" class="form-control" aria-label="exercise"> {{ this.exercise }}
+                            <div type="text" class="form-control" aria-label="exercise"> {{ this.name }}
                             </div>
                         </div>
+                        {{/if}}
                         {{/each}}
                     </div>
                     {{!-- with equipment --}}
@@ -91,17 +97,19 @@
                     </div>
                     <div style="display: none" id="hidden-equipment-exercises">
                         <p class="body-list-title" id="equipment-exercises-header">With Equipment:</p>
-                        {{#each equipmentExercises}}
+                        {{#each exercises}}
+                        {{#if this.equipment_used}}
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
                                 <div class="input-group-text">
-                                    <input type="checkbox" id="exercise-input" aria-label="select-exercise">
+                                    <input data-exercise-id="{{this.id}}" type="checkbox" class="exercise-input" aria-label="select-exercise">
                                 </div>
                             </div>
                             <div type="text" class="form-control" aria-label="exercise">
-                                {{ this.exercise }}
+                                {{ this.name }}
                             </div>
                         </div>
+                        {{/if}}
                         {{/each}}
                     </div>
                     <!-- end exercises form-group -->
@@ -147,5 +155,5 @@
     <!-- end sticky footer -->
 </nav>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script type="text/javascript" src="/js/createWorkout.js"></script>
+{{!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="./js/createWorkout.js"></script> --}}

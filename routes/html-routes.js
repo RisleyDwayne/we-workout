@@ -61,7 +61,9 @@ module.exports = function(app) {
   });
   //--------createworkout handlebars route
 
-  app.get("/createworkout", (req, res) => {
+  app.get("/createworkout", async (req, res) => {
+    const exercises = await db.Exercise.findAll({ raw: true });
+    console.log(JSON.stringify(exercises, null, 2));
     const hbspayload = {
       upperBodyExercises: [
         {
@@ -79,6 +81,6 @@ module.exports = function(app) {
         }
       ]
     };
-    res.render("createWorkout", hbspayload);
+    res.render("createWorkout", { exercises: exercises });
   });
 };
