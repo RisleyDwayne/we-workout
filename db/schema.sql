@@ -1,5 +1,6 @@
 -- Create Database if it doesn't exist --
 DROP DATABASE IF EXISTS project_2;
+
 CREATE DATABASE project_2;
 USE project_2;
 CREATE TABLE exercises (
@@ -11,7 +12,7 @@ CREATE TABLE exercises (
     PRIMARY KEY(id)
 );
 
-SELECT * FROM exercises;
+
 INSERT INTO exercises (exercise_name, body_zone, weights_used,exercise_description) VALUES ('Dumbbell curls', 'Upper', '1', 'Stand holding a dumbbell in each hand with your arms hanging by your sides. Ensure your elbows are close to your torso and your palms facing forward. Keeping your upper arms stationary, exhale as you curl the weights up to shoulder level while contracting your biceps.');
 INSERT INTO exercises (exercise_name, body_zone, weights_used,exercise_description) VALUES ('Triceps dip', 'Upper', '0', 'Sit in a chair or something sturdy (like a box) and put your hands beside you, roughly shoulder-width apart, fingers facing forward. Then, slide your body forward, off of the support. Steady yourself, using your arms for support. Dip down, bending your arms, touching your bottom to the ground, then raise yourself back up again. It’s sort of like a seated pushup.');
 INSERT INTO exercises (exercise_name, body_zone, weights_used,exercise_description) VALUES ('Pushups', 'Upper', '0', 'With hands slightly wider than your shoulders, lower your body until your elbows are at a 90-degree angle, then push up.');
@@ -26,3 +27,16 @@ INSERT INTO exercises (exercise_name, body_zone, weights_used,exercise_descripti
 INSERT INTO exercises (exercise_name, body_zone, weights_used,exercise_description) VALUES ('Goblet Squats', 'Lower', '1', 'Start from a standing position with your feet wide and pointed out, holding the head of the dumbbell or a kettlebell with both hands at chest level. Keep your back straight and push down with your butt until your hips are below your knees. Extend your hips and knees and return to the standing position.');
 INSERT INTO exercises (exercise_name, body_zone, weights_used,exercise_description) VALUES ('Squats', 'Lower', '0', 'Stand with your feet shoulder-width apart. Lower your body, keeping your upper body up and bending at the hips and the knees, until you’re in a squat, with your knees over your ankles and your thighs parallel to the floor. Raise yourself up, pushing through your heels.');
 
+
+
+CREATE TABLE workout (
+    id INT NOT NULL AUTO_INCREMENT,
+    workout_name VARCHAR(75) NOT NULL,
+    exercise_id INT NOT NULL,
+    PRIMARY KEY(id)
+);
+
+SELECT * FROM exercises;
+SELECT * FROM workout;
+
+INSERT INTO workout (exercise_name, body_zone, weights_used,exercise_description) VALUES ;
