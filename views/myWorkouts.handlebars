@@ -1,12 +1,15 @@
-<div class="homePage_banner fixed-top">
-    <img src="./assets/images/weworkout.JPG" class="animate__animated animate__fadeInLeft" id="login_pic"></img>
+<div class="jumbotron  header_custom">
+  <div class="row justify-content-center row-margin">
+    <img src="./assets/images/weworkout-cropped.JPG" class="headerImg animate__animated animate__fadeInLeft"
+      alt="Responsive image">
+  </div>
 </div>
 
 <div class="container">
     <div class="row">
         {{#each workout}}
         <div class="col-sm-6">
-            <div class="card text-white bg-light">
+            <div class="card bg-light">
                 <div class="card-body">
                     <h5 class="card-title">{{this.title}}</h5>
                     {{!-- <p class="card-text">{{this.text}}</p> --}}
