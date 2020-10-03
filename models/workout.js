@@ -1,12 +1,12 @@
 module.exports = function (sequelize, DataTypes) {
 
-    const Workout = sequelize.define("Workout", {
+    const Workout = sequelize.define("workout", {
         id: {
             primaryKey: true,
             type: DataTypes.UUID,
-            defaultValue: DataTypes.UUIDV4,
+            // defaultValue: DataTypes.UUIDV4,
         },
-        name: {
+        workout_name: {
             type: DataTypes.STRING,
             allowNull: false,
             unique: true,

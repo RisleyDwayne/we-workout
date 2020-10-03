@@ -34,6 +34,21 @@ router.post("/signup", (req, res) => {
     });
 });
 
+router.post("/workout", (req, res) => {
+  db.workout
+    .create({
+      workout_name: req.body.workoutName,
+      exercise_id: req.body.exercises
+    })
+    .then(() => {
+      res.redirect(307, "/myworkout");
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(401).json(err);
+    });
+});
+
 // Route for getting some data about our user to be used client side
 router.get("/user_data", (req, res) => {
   if (!req.user) {

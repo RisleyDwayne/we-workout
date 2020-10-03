@@ -1,4 +1,3 @@
-
 INSERT INTO exercises (exercise_name, body_zone, weights_used,exercise_description) VALUES ('Dumbbell curls', 'Upper', '1', 'Stand holding a dumbbell in each hand with your arms hanging by your sides. Ensure your elbows are close to your torso and your palms facing forward. Keeping your upper arms stationary, exhale as you curl the weights up to shoulder level while contracting your biceps.');
 
 INSERT INTO exercises (exercise_name, body_zone, weights_used,exercise_description) VALUES ('Triceps dip', 'Upper', '0', 'Sit in a chair or something sturdy (like a box) and put your hands beside you, roughly shoulder-width apart, fingers facing forward. Then, slide your body forward, off of the support. Steady yourself, using your arms for support. Dip down, bending your arms, touching your bottom to the ground, then raise yourself back up again. It’s sort of like a seated pushup.');

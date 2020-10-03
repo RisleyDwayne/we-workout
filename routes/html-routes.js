@@ -38,7 +38,7 @@ module.exports = function (app) {
       exercises: [
         {
           title: "exercise type",
-          text: "exercise explination",
+          text: "exercise description",
         }
       ]
   };

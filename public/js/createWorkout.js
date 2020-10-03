@@ -68,36 +68,46 @@ $(document).ready(() => {
         .trim(),
       exercises: selectedWorkout.is(":checked")
     };
+
     //if worout name exists
     if (newWorkout.workoutName === "" || newWorkout.exercises === false) {
-      console.log(newWorkout.workoutName, newWorkout.exercises);
       // $("#alert").css("display", "block");
       return;
     }
+    console.log("show:", newWorkout.workoutName, newWorkout.exercises);
+
     //return an alert that says already exists choose a new name
     // If user entered a workout name and selected a exercise, run the newWorkout function
-    // createWorkout(newWorkout.workoutName);
+    // createWorkout(workoutName);
     // workoutName.val("");
     // exercises.val(false);
-    createWorkout();
+    // createWorkout();
+    $.ajax("/api/workout", {
+      type: "POST",
+      data: newWorkout
+    }).then(() => {
+      console.log("created new workout");
+      location.reload();
+    });
   });
 
   // Does a post to the signup route. If successful, we are redirected to the my workouts page
   // Otherwise we log any errors
-  function createWorkout(workoutName, exercises) {
-    $.post("/myworkout", {
-      workoutName: workoutName,
-      exercises: exercises
-    })
-      .then(() => {
-        window.location.replace("/myworkout");
-        // error alert
-      })
-      .catch(handleDuplicateErr);
-  }
+  // function createWorkout(workoutName, exercises) {
+  //   $.post("/myworkouts", (req, res) => {
+  //     const workout_name = workoutName;
+  //     const exercise = exercises;
+  //     res.send(workout_name, exercise);
+  //   })
+  //     .then(() => {
+  //       window.location.replace("/myworkouts");
+  //       // error alert
+  //     })
+  //     .catch(handleDuplicateErr);
+  // }
 
-  function handleDuplicateErr(err) {
-    $("#alert .msg").text(err.responseJSON);
-    $("#alert").fadeIn(500);
-  }
+  // function handleDuplicateErr(err) {
+  //   $("#alert .msg").text(err.responseJSON);
+  //   $("#alert").fadeIn(500);
+  // }
 });
