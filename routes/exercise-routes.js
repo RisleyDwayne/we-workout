@@ -1,13 +1,16 @@
 const router = require("express").Router();
 var db = require("../models");
+const exercise = require("../models/exercise");
 
 
 router.get("/all", function (req, res) {
-    db.Exercise.findAll({
-        include: [db.Post]
-    }).then(function (dbExercise) {
-        res.json(dbExercise);
-    });
+    db.Exercise.all(function(data) {
+        var hbsObject = {
+          db: data
+        };
+        console.log(hbsObject);
+        res.render("index", hbsObject);
+      });
 });
 
 router.get("/:id", function (req, res) {
@@ -18,40 +21,54 @@ router.get("/:id", function (req, res) {
         },
         include: [db.Post]
     }).then(function (dbExercise) {
-        res.json(dbExercise);
+        res.render("exercise", {
+            exercise: dbExercise,
+            name: exercise_name,
+            description: exercise_description,
+        });
     });
 });
 
 router.get("/:upperbody", function (req, res) {
     db.Exercise.findAll({
         where: {
-            body_zone: req.params.upperbody,
+            bodyZone: req.params.body_zone.zone.value[1],
         },
         include: [db.Post]
     }). then(function (dbExercise){
-        res.json(dbExercise);
+        res.render("upperbody", {
+            exercise: dbExercise,
+            body_zone: {value: 'Upper Body'},
+        }
+        );
     });
 });
 
 router.get("/:lowerbody", function (req, res) {
     db.Exercise.findAll({
         where: {
-            body_zone: req.params.lowerbody,
+            body_zone: req.params.body_zone.zone.value[2],
         },
         include: [db.Post]
     }). then(function (dbExercise){
-        res.json(dbExercise);
+        res.render("lowerbody", {
+            exercise: dbExercise,
+            body_zone: {value: 'Lower Body'},
+        });
     });
 });
 
 router.get("/:cardio", function (req, res) {
     db.Exercise.findAll({
         where: {
-            body_zone: req.params.cardio,
+            body_zone: req.params.body_zone.zone.value[3],
         },
         include: [db.Post]
     }). then(function (dbExercise){
-        res.json(dbExercise);
+        res.render("cardio", {
+            exercise: dbExercise,
+            body_zone: {value: "Cario"},
+        });
     });
 });
 
