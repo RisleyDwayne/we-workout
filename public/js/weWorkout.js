@@ -4,7 +4,7 @@ $(document).ready(() => {
   const selectedWorkout = $("input#exercise-input");
 
   //Upper body img hide and show exercises
-  $("#upperBody-img-container").click(function() {
+  $("#upperBody-img-container").click(() => {
     // $(this).hide();
     $("#lowerBody-img-container").hide();
     $("#cardio-img-container").hide();
