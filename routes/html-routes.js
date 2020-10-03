@@ -1,10 +1,11 @@
 // Requiring path to so we can use relative routes to our HTML files
 const path = require("path");
+const db = require("../models");
 
 // Requiring our custom middleware for checking if a user is logged in
 const isAuthenticated = require("../config/middleware/isAuthenticated");
 
-module.exports = function (app) {
+module.exports = function(app) {
   app.get("/", (req, res) => {
     // If the user already has an account send them to the home page
     if (req.user) {
@@ -33,57 +34,51 @@ module.exports = function (app) {
     res.sendFile(path.join(__dirname, "../public/homePage.html"));
   });
   //-----------exercise list handlebars route
-  app.get("/exercises", (req, res) => {
+  app.get("/exercises", async (req, res) => {
+    const exercises = await db.Exercise.findAll({ raw: true });
+    console.log(exercises);
     const hbspayload = {
-      exercises: [
+      exercises
+    };
+    res.render("exerciseList", hbspayload);
+  });
+
+  //-----------exercise list handlebars route
+  app.get("/myworkout", (req, res) => {
+    const hbspayload = {
+      workout: [
         {
-          title: "exercise type",
-          text: "exercise explination",
+          title: "workout type",
+          exercise: [
+            {
+              exerciseName: "exercise name"
+            }
+          ]
         }
       ]
-  };
-  res.render("exerciseList", hbspayload)
-});
+    };
+    res.render("myWorkouts", hbspayload);
+  });
+  //--------createworkout handlebars route
 
-//-----------exercise list handlebars route
-app.get("/myworkout", (req, res) => {
-  const hbspayload = {
-    workout: [
-      {
-        title: "workout type",
-        exercise: [
-          {
-            exerciseName: "exercise name",
-          }
-        ],
-
-      }
-    ]
-  };
-  res.render("myWorkouts", hbspayload)
-});
-//--------createworkout handlebars route
-
-app.get("/createworkout", (req, res) => {
-  const hbspayload = {
-    upperBodyExercises: [
-      {
-        exercise: "exercise name",
-      }
-    ],
-    lowerBodyExercises: [
-      {
-        exercise: "exercise name",
-      }
-    ],
-    equipmentExercises: [
-      {
-        exercise: "exercise name",
-      }
-    ]
-  };
-  res.render("createWorkout", hbspayload)
-});
+  app.get("/createworkout", (req, res) => {
+    const hbspayload = {
+      upperBodyExercises: [
+        {
+          exercise: "exercise name"
+        }
+      ],
+      lowerBodyExercises: [
+        {
+          exercise: "exercise name"
+        }
+      ],
+      equipmentExercises: [
+        {
+          exercise: "exercise name"
+        }
+      ]
+    };
+    res.render("createWorkout", hbspayload);
+  });
 };
-
-
