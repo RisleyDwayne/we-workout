@@ -1,4 +1,4 @@
-# we workout
+# We Workout
 
 [![MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
@@ -73,5 +73,7 @@ MySQL, Node.js, Express, Express-Handlebars, ESLint, jQuery, Heroku, CSS, HTML, 
 [Shawn Rather](https://github.com/SAR-SA)
 
 [Dwayne Risley](https://github.com/RisleyDwayne)
+
+[Ahmed Sheikh](https://github.com/ASheikh-io)
 
 *Copyright (c) 2020 Project 2 Group 4 WAPP*
