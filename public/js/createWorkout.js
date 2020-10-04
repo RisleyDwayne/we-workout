@@ -64,8 +64,8 @@ $(document).ready(() => {
     event.preventDefault();
     const newWorkout = {
       workoutName: $("#workout-name-input")
-      .val()
-      .trim(),
+        .val()
+        .trim(),
       exercises: selectedWorkout.is(":checked")
     };
     console.log(newWorkout, selectedWorkout);
@@ -77,19 +77,27 @@ $(document).ready(() => {
     }
     console.log("show:", newWorkout.workoutName, newWorkout.exercises);
 
+    $(".exercise-input").on("click", function(event) {
+      const clickedExercises = [];
+      const id = $(this).data("id");
+      clickedExercises.push(id);
+      console.log(clickedExercises);
+      
+      $.ajax("/api/workout", {
+        type: "POST",
+        data: clickedExercises
+      }).then(() => {
+        console.log("created new workout");
+        // location.reload();
+      });
+    });
+
     //return an alert that says already exists choose a new name
     // If user entered a workout name and selected a exercise, run the newWorkout function
     // createWorkout(workoutName);
     // workoutName.val("");
     // exercises.val(false);
     // createWorkout();
-    $.ajax("/api/workout", {
-      type: "POST",
-      data: newWorkout
-    }).then(() => {
-      console.log("created new workout");
-      // location.reload();
-    });
   });
 
   // Does a post to the signup route. If successful, we are redirected to the my workouts page
