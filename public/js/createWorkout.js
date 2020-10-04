@@ -76,20 +76,20 @@ $(document).ready(() => {
       return;
     }
     console.log("show:", newWorkout.workoutName, newWorkout.exercises);
+  });
 
-    $(".exercise-input").on("click", function(event) {
-      const clickedExercises = [];
-      const id = $(this).data("id");
-      clickedExercises.push(id);
-      console.log(clickedExercises);
-      
-      $.ajax("/api/workout", {
-        type: "POST",
-        data: clickedExercises
-      }).then(() => {
-        console.log("created new workout");
-        // location.reload();
-      });
+  $(".exercise-input").on("click", function(event) {
+    const clickedExercises = [];
+    const id = $(this).data("exercise-id");
+    clickedExercises.push(id);
+    console.log(clickedExercises);
+
+    $.ajax("/api/workout", {
+      type: "POST",
+      data: clickedExercises
+    }).then(() => {
+      console.log("created new workout");
+      // location.reload();
     });
 
     //return an alert that says already exists choose a new name
