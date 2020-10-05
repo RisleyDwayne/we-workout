@@ -37,8 +37,8 @@ module.exports = function (app) {
     const hbspayload = {
       exercises: [
         {
-          title: "exercise type",
-          text: "exercise explination",
+          exercise_name: "exercise type",
+          exercise_description: "exercise explination",
         }
       ]
   };
