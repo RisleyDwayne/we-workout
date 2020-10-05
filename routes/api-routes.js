@@ -35,13 +35,13 @@ router.post("/signup", (req, res) => {
 });
 
 router.post("/workout", (req, res) => {
-  db.Workout
-    .create({
-      name: req.body.workoutName,
-      ExerciseId: req.body.exercises
-    })
+  db.Workout.create({
+    name: req.body.workoutName,
+    ExerciseId: req.body.exercises
+  })
     .then(() => {
-      res.redirect(307, "/myworkout");
+      res.json("ok");
+      // res.redirect(307, "/myworkout");
     })
     .catch(err => {
       console.log(err);
