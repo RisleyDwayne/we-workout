@@ -3,11 +3,11 @@ module.exports = function(sequelize, DataTypes) {
     id: {
       primaryKey: true,
       type: DataTypes.UUID,
-      defaultValue: DataTypes.UUIDV4,
+      defaultValue: DataTypes.UUIDV4
     },
     name: {
       type: DataTypes.STRING,
-      unique: true,
+      unique: true
     }
   });
   Workout.associate = models => {

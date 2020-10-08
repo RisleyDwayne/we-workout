@@ -66,7 +66,11 @@ $(document).ready(() => {
       workoutName: $("#workout-name-input")
         .val()
         .trim(),
-      exercises: selectedWorkout.is(":checked")
+      exercises: $("input.exercise-input:checked")
+        .map((i, elm) => {
+          return elm.getAttribute("data-exercise-id");
+        })
+        .toArray()
     };
     console.log(newWorkout, selectedWorkout);
 
@@ -76,29 +80,21 @@ $(document).ready(() => {
       return;
     }
     console.log("show:", newWorkout.workoutName, newWorkout.exercises);
-  });
-
-  $(".exercise-input").on("click", function(event) {
-    const clickedExercises = [];
-    const id = $(this).data("exercise-id");
-    clickedExercises.push(id);
-    console.log(clickedExercises);
-
     $.ajax("/api/workout", {
       type: "POST",
-      data: clickedExercises
+      data: newWorkout
     }).then(() => {
       console.log("created new workout");
       // location.reload();
     });
-
-    //return an alert that says already exists choose a new name
-    // If user entered a workout name and selected a exercise, run the newWorkout function
-    // createWorkout(workoutName);
-    // workoutName.val("");
-    // exercises.val(false);
-    // createWorkout();
   });
+
+  //return an alert that says already exists choose a new name
+  // If user entered a workout name and selected a exercise, run the newWorkout function
+  // createWorkout(workoutName);
+  // workoutName.val("");
+  // exercises.val(false);
+  // createWorkout();
 
   // Does a post to the signup route. If successful, we are redirected to the my workouts page
   // Otherwise we log any errors
