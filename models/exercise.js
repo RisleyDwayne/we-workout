@@ -1,5 +1,5 @@
 /* eslint-disable camelcase */
-// Exercie Module
+// Exercise Module
 
 module.exports = function(sequelize, DataTypes) {
   const Exercise = sequelize.define("Exercise", {

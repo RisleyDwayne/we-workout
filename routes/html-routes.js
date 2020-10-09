@@ -43,24 +43,18 @@ module.exports = function(app) {
     res.render("exerciseList", hbspayload);
   });
 
-  //-----------exercise list handlebars route
-  app.get("/myworkout", (req, res) => {
+  // //-----------myworkouts handlebars route
+  app.get("/myworkout", async (req, res) => {
+    const myWorkout = await db.Workout.findAll({ raw: true });
+    console.log(JSON.stringify(myWorkout, null, 2));
+    //if workout undefined or empty it is because server restarting cleared the created workout from the database. create another workout.
     const hbspayload = {
-      workout: [
-        {
-          title: "workout type",
-          exercise: [
-            {
-              exerciseName: "exercise name"
-            }
-          ]
-        }
-      ]
+      workout: myWorkout
     };
     res.render("myWorkouts", hbspayload);
   });
-  //--------createworkout handlebars route
 
+  //--------createworkout handlebars route
   app.get("/createworkout", async (req, res) => {
     const exercises = await db.Exercise.findAll({ raw: true });
     console.log(JSON.stringify(exercises, null, 2));
