@@ -1,7 +1,7 @@
 $(document).ready(() => {
   // Create workout form and input
   const createWorkoutForm = $("form.createWorkout");
-  const selectedWorkout = $("input#exercise-input");
+  const selectedWorkout = $("input.exercise-input");
 
   //Upper body img hide and show exercises
   $("#upperBody-img-container").click(function() {
@@ -66,8 +66,13 @@ $(document).ready(() => {
       workoutName: $("#workout-name-input")
         .val()
         .trim(),
-      exercises: selectedWorkout.is(":checked")
+      exercises: $("input.exercise-input:checked")
+        .map((i, elm) => {
+          return elm.getAttribute("data-exercise-id");
+        })
+        .toArray()
     };
+    console.log(newWorkout, selectedWorkout);
 
     //if worout name exists
     if (newWorkout.workoutName === "" || newWorkout.exercises === false) {
@@ -75,21 +80,21 @@ $(document).ready(() => {
       return;
     }
     console.log("show:", newWorkout.workoutName, newWorkout.exercises);
-
-    //return an alert that says already exists choose a new name
-    // If user entered a workout name and selected a exercise, run the newWorkout function
-    // createWorkout(workoutName);
-    // workoutName.val("");
-    // exercises.val(false);
-    // createWorkout();
     $.ajax("/api/workout", {
       type: "POST",
       data: newWorkout
     }).then(() => {
       console.log("created new workout");
-      location.reload();
+      // location.reload();
     });
   });
+
+  //return an alert that says already exists choose a new name
+  // If user entered a workout name and selected a exercise, run the newWorkout function
+  // createWorkout(workoutName);
+  // workoutName.val("");
+  // exercises.val(false);
+  // createWorkout();
 
   // Does a post to the signup route. If successful, we are redirected to the my workouts page
   // Otherwise we log any errors
