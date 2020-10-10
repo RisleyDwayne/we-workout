@@ -44,7 +44,7 @@ app.use("/api", apiroutes);
 require("./routes/html-routes.js")(app);
 
 // Syncing our database and logging a message to the user upon success
-db.sequelize.sync({ force: true }).then(() => {
+db.sequelize.sync({ force: false }).then(() => {
   const exerciseSeeds = [
     {
       name: "Dumbbell Curls",
@@ -148,9 +148,9 @@ db.sequelize.sync({ force: true }).then(() => {
         "Stand with your feet shoulder-width apart. Lower your body, keeping your upper body up and bending at the hips and the knees, until you’re in a squat, with your knees over your ankles and your thighs parallel to the floor. Raise yourself up, pushing through your heels."
     }
   ];
-  for (const ex of exerciseSeeds) {
-    db.Exercise.create(ex);
-  }
+  // for (const ex of exerciseSeeds) {
+  //   db.Exercise.create(ex);
+  // }
 
   app.listen(PORT, () => {
     console.log(

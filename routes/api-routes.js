@@ -3,8 +3,10 @@ const router = require("express").Router();
 const db = require("../models");
 const passport = require("../config/passport");
 const exerciseRoutes = require("./exercise-routes");
+// const createdWorkoutRoutes = require("./myWorkouts");
 
 router.use("/exercise", exerciseRoutes);
+// router.use("/myworkout", createdWorkoutRoutes);
 
 // Using the passport.authenticate middleware with our local strategy.
 // If the user has valid login credentials, send them to the members page.
@@ -15,6 +17,20 @@ router.post("/login", passport.authenticate("local"), (req, res) => {
     email: req.user.email,
     id: req.user.id
   });
+});
+
+//postman
+router.get("/myworkout", async (req, res) => {
+  const myWorkout = await db.Workout.findAll({
+    // raw: true,
+    include: [
+      {
+        model: db.Exercise,
+        as: "Exercises"
+      }
+    ]
+  });
+  res.json(myWorkout);
 });
 
 // Route for signing up a user. The user's password is automatically hashed and stored securely thanks to
@@ -36,9 +52,10 @@ router.post("/signup", (req, res) => {
 
 router.post("/workout", (req, res) => {
   console.log("req,body", req.body);
+  console.log("req,body", req.body.exercises);
   db.Workout.create({
-    name: req.body.workoutName
-    // exercises: req.body.exercises
+    name: req.body.workoutName,
+    exercises: req.body.exercises
     // ExerciseId: req.body.exercises
   })
     .then(createdWorkout => {
