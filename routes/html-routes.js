@@ -4,6 +4,7 @@ const db = require("../models");
 
 // Requiring our custom middleware for checking if a user is logged in
 const isAuthenticated = require("../config/middleware/isAuthenticated");
+const workout = require("../models/workout");
 
 module.exports = function(app) {
   app.get("/", (req, res) => {
@@ -45,11 +46,17 @@ module.exports = function(app) {
 
   // //-----------myworkouts handlebars route
   app.get("/myworkout", async (req, res) => {
-    const myWorkout = await db.Workout.findAll({ raw: true });
+    const myWorkout = await db.Workout.findAll({
+      include: [
+        {
+          model: db.Exercise,
+          as: "Exercises"
+        }
+      ]
+    });
     console.log(JSON.stringify(myWorkout, null, 2));
-    //if workout undefined or empty it is because server restarting cleared the created workout from the database. create another workout.
     const hbspayload = {
-      workout: myWorkout
+      workouts: myWorkout.map((workout) => workout.toJSON())
     };
     res.render("myWorkouts", hbspayload);
   });
