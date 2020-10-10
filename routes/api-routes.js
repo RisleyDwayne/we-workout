@@ -22,7 +22,6 @@ router.post("/login", passport.authenticate("local"), (req, res) => {
 //postman
 router.get("/myworkout", async (req, res) => {
   const myWorkout = await db.Workout.findAll({
-    // raw: true,
     include: [
       {
         model: db.Exercise,
